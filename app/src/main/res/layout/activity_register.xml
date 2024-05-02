@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="459dp"
+        android:layout_height="933dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/background_login"
+        tools:layout_editor_absoluteX="-18dp"
+        tools:layout_editor_absoluteY="-121dp"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="384dp"
+        android:fontFamily="@font/lobster"
+        android:text="Cadastre-se!"
+        android:textColor="@color/white"
+        android:textSize="33sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.223" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="340dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/icon_user"
+        android:drawablePadding="7dp"
+        android:hint="Digite seu nome"
+        android:text="Nome completo:"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintWidth_percent=".8"
+        android:paddingStart="5dp"
+
+        ></EditText>
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="340dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/icon_user"
+        android:drawablePadding="7dp"
+        android:hint="Confirme sua senha"
+        android:text="Confirme sua senha:"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText7"
+        app:layout_constraintWidth_percent=".8"
+        android:paddingStart="5dp"
+        ></EditText>
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="340dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/icon_user"
+        android:drawablePadding="7dp"
+        android:hint="Digite sua senha"
+        android:text="Senha:"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText6"
+        app:layout_constraintWidth_percent=".8"
+        android:paddingStart="5dp"
+        ></EditText>
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="340dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/icon_user"
+        android:drawablePadding="7dp"
+        android:hint="Digite seu email"
+        android:text="Email:"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText5"
+        app:layout_constraintWidth_percent=".8"
+        android:paddingStart="5dp"
+        ></EditText>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/forma_do_botao"
+        android:backgroundTint="@color/white"
+        android:backgroundTintMode="@null"
+        android:onClick="register"
+        android:text="Cadastrar"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText8"
+        app:layout_constraintVertical_bias="0.051"
+        app:layout_constraintWidth_percent=".8" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="40dp"
+        android:text="Já possui cadastro?"
+        android:textAlignment="center"
+        android:textColor="#FBFBFB"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btnRegister"
+        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="96dp"
+        android:text="Fazer login"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"></TextView>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="171dp"
+        android:layout_height="161dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/snack_logo"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
