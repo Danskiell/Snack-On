@@ -8,12 +8,16 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="459dp"
-        android:layout_height="933dp"
+        android:layout_width="593dp"
+        android:layout_height="1329dp"
+        android:layout_marginStart="-5dp"
         android:scaleType="fitCenter"
         android:src="@drawable/background_login"
-        tools:layout_editor_absoluteX="-12dp"
-        tools:layout_editor_absoluteY="-126dp"></ImageView>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <TextView
         android:id="@+id/textView5"
@@ -36,19 +40,17 @@
         android:id="@+id/editText7"
         android:layout_width="340dp"
         android:layout_height="36dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="@color/white"
         android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/icon_user"
+        android:drawableLeft="@drawable/icon_password"
         android:drawablePadding="7dp"
-        android:hint="Digite sua senha"
+        android:hint="Senha"
         android:paddingStart="5dp"
-        android:text="Senha:"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.346"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText6"
+        app:layout_constraintStart_toStartOf="@+id/editText6"
         app:layout_constraintTop_toBottomOf="@+id/editText6"
         app:layout_constraintWidth_percent=".8"></EditText>
 
@@ -56,18 +58,19 @@
         android:id="@+id/editText6"
         android:layout_width="340dp"
         android:layout_height="36dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@color/white"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/icon_user"
         android:drawablePadding="7dp"
-        android:hint="Digite seu email"
+        android:hint="Email:"
         android:paddingStart="5dp"
-        android:text="Email:"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:layout_constraintWidth_percent=".8"></EditText>
@@ -106,54 +109,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
+
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="-20dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="88dp"
         android:text="Crie uma"
         android:textAlignment="center"
         android:textColor="#EE7E00"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister"></TextView>
-
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="171dp"
         android:layout_height="161dp"
+        android:layout_marginTop="-700dp"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/snack_logo"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/snack_logo" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="36dp"
         android:text="Esqueceu sua senha?"
         android:textAlignment="center"
         android:textColor="#FBFBFB"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText7"
+        app:layout_constraintStart_toStartOf="@+id/editText7"
         app:layout_constraintTop_toBottomOf="@+id/editText7" />
-
-
-
-
-
-
-
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
