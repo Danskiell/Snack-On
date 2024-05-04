@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Snack"
         tools:targetApi="31">
         <activity
+            android:name=".BemVindoActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
