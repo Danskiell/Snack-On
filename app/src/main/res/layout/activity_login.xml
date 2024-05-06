@@ -82,7 +82,7 @@
         android:layout_marginTop="48dp"
         android:backgroundTint="@color/white"
         android:backgroundTintMode="@null"
-        android:onClick="register"
+        android:onClick="logar"
         android:text="Login"
         android:textAllCaps="false"
         android:textColor="#000000"
