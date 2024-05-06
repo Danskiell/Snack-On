@@ -8,24 +8,29 @@
     tools:context=".RegisterActivity">
 
 
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="593dp"
         android:layout_height="1329dp"
         android:layout_marginStart="-5dp"
+        android:layout_marginBottom="2dp"
         android:elevation="1dp"
         android:scaleType="fitCenter"
         android:src="@drawable/register_fundo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.985"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
 
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/snackLogo"
         android:layout_width="171dp"
         android:layout_height="161dp"
         android:layout_marginTop="-700dp"
@@ -33,10 +38,46 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.511"
         app:srcCompat="@drawable/snack_logo" />
+
+    <View
+        android:id="@+id/ellipse_1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/eclipse_shape"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="400dp"
+        app:layout_constraintBottom_toBottomOf="@+id/snackLogo"
+        app:layout_constraintEnd_toEndOf="@+id/snackLogo"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/snackLogo"
+        app:layout_constraintTop_toTopOf="@+id/snackLogo"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <View
+        android:id="@+id/ellipse_2"
+        android:layout_width="24dp"
+        android:layout_height="71dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/eclipse_shape"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="400dp"
+        app:layout_constraintBottom_toBottomOf="@+id/snackLogo"
+        app:layout_constraintEnd_toEndOf="@+id/snackLogo"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="@+id/snackLogo"
+        app:layout_constraintTop_toTopOf="@+id/snackLogo"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView5"
@@ -53,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/snackLogo"
         app:layout_constraintVertical_bias="0.223" />
 
     <EditText
@@ -63,8 +104,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:background="@color/input_background"
+        android:backgroundTint="@color/input_background"
         android:drawableLeft="@drawable/icon_user"
         android:drawablePadding="7dp"
         android:elevation="500dp"
@@ -81,9 +122,12 @@
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="393dp"
+        android:layout_width="350dp"
         android:layout_height="57dp"
+        android:layout_marginTop="-50dp"
         android:background="@drawable/button_shape"
+        android:backgroundTint="@color/buttonColor"
+        android:backgroundTintMode="@null"
         android:elevation="500dp"
         android:onClick="register"
         android:text="Cadastrar"
@@ -92,10 +136,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.592"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/inputConfPass"
         app:layout_constraintWidth_percent=".8" />
 
@@ -106,8 +148,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:background="@color/input_background"
+        android:backgroundTint="@color/input_background"
         android:drawableLeft="@drawable/icon_last_name"
         android:drawablePadding="7dp"
         android:elevation="500dp"
@@ -128,8 +170,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:background="@color/input_background"
+        android:backgroundTint="@color/input_background"
         android:drawableLeft="@drawable/icon_password"
         android:drawablePadding="7dp"
         android:elevation="500dp"
@@ -169,8 +211,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:background="@color/input_background"
+        android:backgroundTint="@color/input_background"
         android:drawableLeft="@drawable/icon_password"
         android:drawablePadding="7dp"
         android:elevation="500dp"
@@ -190,8 +232,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:background="@color/input_background"
+        android:backgroundTint="@color/input_background"
         android:drawableLeft="@drawable/icon_phone"
         android:drawablePadding="7dp"
         android:elevation="500dp"
@@ -212,14 +254,13 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:background="@color/input_background"
+        android:backgroundTint="@color/input_background"
         android:drawableLeft="@drawable/icon_email"
         android:drawablePadding="7dp"
         android:elevation="500dp"
-        android:hint="Digite seu email"
+        android:hint="Email:"
         android:paddingStart="5dp"
-        android:text="Email:"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -232,33 +273,41 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="180dp"
         android:elevation="500dp"
         android:text="Já possui cadastro?"
         android:textAlignment="center"
-        android:textColor="#FBFBFB"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toStartOf="@+id/btnRegister"
-        app:layout_constraintTop_toBottomOf="@+id/inputPass" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="148dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
         android:elevation="500dp"
         android:text="Fazer login"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#FF9900"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"></TextView>
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+        app:layout_constraintVertical_bias="0.0"></TextView>
 
     <ImageView
         android:id="@+id/imageView5"
@@ -272,8 +321,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPass"
-        app:layout_constraintVertical_bias="0.448"
-        app:srcCompat="@drawable/rectangle" />
+        app:layout_constraintVertical_bias="0.538"
+        app:srcCompat="@drawable/angulotangulo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
