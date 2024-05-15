@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="566dp"
-        android:layout_height="1156dp"
+        android:layout_width="473dp"
+        android:layout_height="941dp"
         android:layout_marginStart="-5dp"
         android:scaleType="centerCrop"
         android:src="@drawable/background_login"
@@ -138,7 +138,7 @@
         android:id="@+id/imageView3"
         android:layout_width="171dp"
         android:layout_height="161dp"
-        android:layout_marginTop="-600dp"
+        android:layout_marginTop="-550dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

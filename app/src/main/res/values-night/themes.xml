@@ -13,5 +13,55 @@
 
         <!-- Customize your theme here. -->
     </style>
+    <style name="daniel_alve">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="cliente">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#616161</item>
+    </style>
+
+    <style name="perfil">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="configura_e">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#616161</item>
+    </style>
+
+        <style name="notifica_es">
+            <item name="android:textSize">18sp</item>
+            <item name="android:textColor">#000000</item>
+        </style>
+
+        <style name="minha_centr">
+            <item name="android:textSize">12sp</item>
+            <item name="android:textColor">#616161</item>
+        </style>
+
+        <style name="pagamentos">
+            <item name="android:textSize">18sp</item>
+            <item name="android:textColor">#000000</item>
+        </style>
+
+        <style name="meus_saldos">
+            <item name="android:textSize">12sp</item>
+            <item name="android:textColor">#616161</item>
+        </style>
+
+        <style name="configuracoes">
+            <item name="android:textSize">12sp</item>
+            <item name="android:textColor">#616161</item>
+        </style>
+
+        <style name="config">
+            <item name="android:textSize">18sp</item>
+            <item name="android:textColor">#000000</item>
+        </style>
+
 
 </resources>

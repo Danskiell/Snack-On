@@ -1,12 +1,16 @@
 package com.example.snack;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.WindowManager;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
 
 public class ComprasActivity extends AppCompatActivity {
 
@@ -20,5 +24,9 @@ public class ComprasActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void config(View view){
+        startActivity(new Intent(ComprasActivity.this, ProfileActivity.class));
+
     }
 }
