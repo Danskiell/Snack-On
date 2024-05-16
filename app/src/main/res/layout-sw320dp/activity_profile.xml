@@ -5,22 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF7A00"
+    android:background="#FFFFFF"
     tools:context=".ProfileActivity">
 
     <View
         android:id="@+id/rectangle_3"
         android:layout_width="0dp"
-        android:layout_height="851dp"
+        android:layout_height="0dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginBottom="11dp"
         android:background="@drawable/rectangle_3"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/line_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -137,13 +137,13 @@
         android:layout_width="61dp"
         android:layout_height="47dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.076"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.227"
         app:srcCompat="@drawable/icon_user_config" />
 
     <TextView
@@ -153,6 +153,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="120dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/inter_black"
         android:gravity="center_vertical"
         android:text="@string/perfil"
@@ -162,7 +163,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.233" />
+        app:layout_constraintVertical_bias="0.202" />
 
     <TextView
         android:id="@+id/configura_e"
@@ -171,7 +172,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/inter_black"
         android:gravity="center_vertical"
         android:text="@string/configura_e"
@@ -182,7 +183,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintVertical_bias="0.234" />
+
+    <View
+        android:id="@+id/line_"
+        android:layout_width="350dp"
+        android:layout_height="4dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/line_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/line_1"
@@ -190,20 +206,21 @@
         android:layout_height="4dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="240dp"
-        android:background="@drawable/line_3"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/linha_divisivel"
+        app:layout_constraintBottom_toTopOf="@+id/iconeUsuario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/iconeNotific"
         android:layout_width="61dp"
         android:layout_height="47dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -217,6 +234,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/inter_black"
         android:gravity="center_vertical"
         android:text="@string/notifica_es"
@@ -235,7 +253,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/inter_black"
         android:gravity="center_vertical"
         android:text="@string/minha_centr"
