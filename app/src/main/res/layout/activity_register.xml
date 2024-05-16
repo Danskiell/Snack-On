@@ -11,24 +11,23 @@
 
     <!-- Auto layout, variables, and unit scale are not yet supported -->
 
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="593dp"
-        android:layout_height="1329dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="-5dp"
-        android:layout_marginBottom="2dp"
         android:elevation="1dp"
-        android:scaleType="fitCenter"
+        android:scaleType="centerCrop"
         android:src="@drawable/register_fundo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
 
     <ImageView
         android:id="@+id/snackLogo"

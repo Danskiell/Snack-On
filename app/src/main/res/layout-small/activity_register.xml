@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_height="match_parent"
+android:layout_width="match_parent"
+android:fillViewport="true"
+    android:id="@+id/main"
+    tools:context=".RegisterActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTintMode="@null"
+        >
+
+
+        <ImageView
+            android:id="@+id/snackLogo"
+            android:layout_width="171dp"
+            android:layout_height="161dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginBottom="684dp"
+            android:elevation="500dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/snack_logo" />
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="500dp"
+            android:fontFamily="@font/lobster"
+            android:text="Cadastre-se!"
+            android:textColor="@color/black"
+            android:textSize="33sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.327" />
+
+        <EditText
+            android:id="@+id/inputName"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/input_shape"
+
+            android:drawableLeft="@drawable/icon_user"
+            android:drawablePadding="7dp"
+            android:elevation="500dp"
+            android:fontFamily="@font/inter_black"
+            android:hint="Nome:"
+            android:paddingStart="5dp"
+            android:textColor="@color/inputTextColor"
+            android:textColorHint="@color/inputTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintWidth_percent=".8"
+
+            ></EditText>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="-5dp"
+            android:elevation="1dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/register_fundo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <EditText
+            android:id="@+id/inputPass"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/input_shape"
+            android:drawableLeft="@drawable/icon_password"
+            android:drawablePadding="7dp"
+            android:elevation="500dp"
+            android:fontFamily="@font/inter_black"
+            android:hint="Senha:"
+            android:paddingStart="5dp"
+            android:textColor="@color/inputTextColor"
+            android:textColorHint="@color/inputTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputTelefone"
+            app:layout_constraintWidth_percent=".8"></EditText>
+
+        <EditText
+            android:id="@+id/inputTelefone"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/input_shape"
+            android:drawableLeft="@drawable/icon_phone"
+            android:drawablePadding="7dp"
+            android:elevation="500dp"
+            android:fontFamily="@font/inter_black"
+            android:hint="Telefone:"
+            android:paddingStart="5dp"
+            android:textColor="@color/inputTextColor"
+            android:textColorHint="@color/inputTextColor"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+            app:layout_constraintWidth_percent=".8"></EditText>
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/input_shape"
+            android:drawableLeft="@drawable/icon_email"
+            android:drawablePadding="7dp"
+            android:elevation="500dp"
+            android:fontFamily="@font/inter_black"
+            android:hint="Email:"
+            android:paddingStart="5dp"
+            android:textColor="@color/inputTextColor"
+            android:textColorHint="@color/inputTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputLastName"
+            app:layout_constraintWidth_percent=".8"></EditText>
+
+
+        <EditText
+            android:id="@+id/inputLastName"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/input_shape"
+            android:drawableLeft="@drawable/icon_last_name"
+            android:drawablePadding="7dp"
+            android:elevation="500dp"
+            android:fontFamily="@font/inter_black"
+            android:hint="Sobrenome:"
+            android:paddingStart="5dp"
+            android:textColor="@color/inputTextColor"
+            android:textColorHint="@color/inputTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputName"
+            app:layout_constraintWidth_percent=".8"></EditText>
+
+        <EditText
+            android:id="@+id/inputConfPass"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/input_shape"
+            android:drawableLeft="@drawable/icon_password"
+            android:drawablePadding="7dp"
+            android:elevation="500dp"
+            android:fontFamily="@font/inter_black"
+            android:hint="Confirmar Senha:"
+            android:paddingStart="5dp"
+            android:textColor="@color/inputTextColor"
+            android:textColorHint="@color/inputTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputPass"
+            app:layout_constraintWidth_percent=".8"></EditText>
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="72dp"
+            android:elevation="500dp"
+            android:text="Já possui cadastro?"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCadastro"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btnCadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/btn_shape"
+            android:backgroundTintMode="@null"
+            android:elevation="500dp"
+            android:fontFamily="@font/inter_black"
+            android:onClick="cadastro"
+            android:text="Cadastrar"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputConfPass"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="72dp"
+            android:elevation="500dp"
+            android:fontFamily="@font/inter_black"
+            android:onClick="fazerLogin"
+            android:text="Fazer login"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCadastro"
+            app:layout_constraintVertical_bias="1.0"></TextView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
