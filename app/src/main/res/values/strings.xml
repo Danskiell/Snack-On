@@ -17,6 +17,11 @@
     <string name="configuracoes">Ajuste ou altere suas propriedades</string>
     <string name="config">Configurações</string>
     <string name="menu_home">Home</string>
+    <string name="senhaEsquecer"> Esqueceu sua senha? </string>
+    <string name="criar_conta"> Cadastre-se aqui </string>
     <string name="menu_gallery">Gallery</string>
+    <string name="total">Total</string>
+    <string name="price">R$ 0,00</string>
+    <string name="carrinhoMainText"> Itens no Carrinho </string>
     <string name="menu_slideshow">Slideshow</string>
 </resources>

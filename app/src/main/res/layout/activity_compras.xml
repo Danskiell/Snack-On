@@ -66,6 +66,19 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/profile_icon" />
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="150dp"
+        android:layout_height="126dp"
+        android:elevation="500dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sugest"
+        app:layout_constraintEnd_toEndOf="@+id/sugest"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toEndOf="@+id/melhores"
+        app:layout_constraintTop_toTopOf="@+id/sugesting"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/torta" />
+
     <View
         android:id="@+id/sugest"
         android:layout_width="0dp"
@@ -81,7 +94,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doces"
-        app:layout_constraintVertical_bias="0.425"></View>
+        app:layout_constraintVertical_bias="1.0"></View>
 
     <TextView
         android:id="@+id/labelSugestao"
@@ -93,22 +106,31 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/sugest"
         app:layout_constraintEnd_toEndOf="@+id/sugest"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="@+id/sugest"
         app:layout_constraintTop_toTopOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.523"></TextView>
+        app:layout_constraintVertical_bias="0.593"></TextView>
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="150dp"
-        android:layout_height="126dp"
+    <TextView
+        android:id="@+id/melhores"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="500dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="top"
+        android:lineHeight="46sp"
+        android:text="Torta de limão"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/sugest"
         app:layout_constraintEnd_toEndOf="@+id/sugest"
-        app:layout_constraintHorizontal_bias="0.806"
-        app:layout_constraintStart_toEndOf="@+id/melhores"
-        app:layout_constraintTop_toTopOf="@+id/sugesting"
-        app:layout_constraintVertical_bias="0.73"
-        app:srcCompat="@drawable/torta" />
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="@+id/sugest"
+        app:layout_constraintTop_toTopOf="@+id/sugest"
+        app:layout_constraintVertical_bias="0.15" />
 
     <TextView
         android:id="@+id/sugesting"
@@ -131,27 +153,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doces"
         app:layout_constraintVertical_bias="0.846" />
-
-    <TextView
-        android:id="@+id/melhores"
-        android:layout_width="wrap_content"
-        android:layout_height="57dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:elevation="500dp"
-        android:fontFamily="@font/inter_black"
-        android:gravity="top"
-        android:lineHeight="46sp"
-        android:text="Torta de limão"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/sugest"
-        app:layout_constraintEnd_toEndOf="@+id/sugest"
-        app:layout_constraintHorizontal_bias="0.027"
-        app:layout_constraintStart_toStartOf="@+id/sugest"
-        app:layout_constraintTop_toTopOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.226" />
 
     <TextView
         android:id="@+id/labelDoces"
@@ -299,10 +300,11 @@
         android:layout_marginBottom="-25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.374"
+        android:onClick="carrinho"
+        app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.864"
+        app:layout_constraintVertical_bias="0.76"
         app:srcCompat="@drawable/icon_cart" />
 
     <ImageView
@@ -312,10 +314,10 @@
         android:layout_marginBottom="-25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.864"
+        app:layout_constraintVertical_bias="0.76"
         app:srcCompat="@drawable/icon_search_nav" />
 
     <ImageView
@@ -326,10 +328,10 @@
         android:onClick="config"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.864"
+        app:layout_constraintVertical_bias="0.76"
         app:srcCompat="@drawable/icon_user_nav" />
 
 

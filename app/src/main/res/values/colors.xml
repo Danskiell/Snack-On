@@ -11,4 +11,5 @@
     <color name="input_background">#DEDEDD</color>
     <color name="buttonColor">#FFC900</color>
     <color name="inputTextColor">#696969</color>
+    <color name="orangeMain">#FF7A00</color>
 </resources>
