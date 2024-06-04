@@ -1,6 +1,8 @@
 package com.example.snack;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,16 @@ public class CarrinhoActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void gohome(View view){
+        startActivity(new Intent(CarrinhoActivity.this, ComprasActivity.class));
+
+    }
+    public void config(View view){
+        startActivity(new Intent(CarrinhoActivity.this, ProfileActivity.class));
+
+    }
+    public void carrinho(View view){
+        startActivity(new Intent(CarrinhoActivity.this, CarrinhoActivity.class));
     }
 }

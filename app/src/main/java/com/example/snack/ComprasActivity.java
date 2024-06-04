@@ -32,4 +32,10 @@ public class ComprasActivity extends AppCompatActivity {
     public void carrinho(View view){
         startActivity(new Intent(ComprasActivity.this, CarrinhoActivity.class));
     }
+    public void gohome(View view){
+        startActivity(new Intent(ComprasActivity.this, ComprasActivity.class));
+
+    }
+
+
 }
