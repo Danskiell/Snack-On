@@ -137,6 +137,7 @@
         android:layout_marginStart="160dp"
         android:layout_marginTop="4dp"
         android:text="Esqueceu sua senha?"
+        android:onClick="esqueceu"
         android:textAlignment="center"
         android:textColor="#FBFBFB"
         android:textSize="18sp"

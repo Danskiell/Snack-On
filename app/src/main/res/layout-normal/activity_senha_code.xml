@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SenhaActivity">
+    tools:context=".SenhaCodeActivity">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -45,32 +45,34 @@
         android:layout_alignParentTop="true"
         android:elevation="16dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/desc1"
+        android:text="@string/desc2"
         android:textAppearance="@style/descStyle"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_senha"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
-        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintVertical_bias="0.29" />
 
     <EditText
         android:id="@+id/inputRecEmail"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:background="@drawable/input_shape_email"
-        android:drawableLeft="@drawable/icon_email"
+        android:drawableLeft="@drawable/icon_password"
         android:drawablePadding="7dp"
         android:elevation="16dp"
         android:fontFamily="@font/inter_black"
-        android:hint="Email:"
+        android:hint="Confirmar código:"
         android:paddingStart="5dp"
         android:textColor="@color/inputTextColor"
         android:textColorHint="@color/inputTextColor"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_senha"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
+        app:layout_constraintVertical_bias="0.498"
         app:layout_constraintWidth_percent=".8"></EditText>
 
     <View
@@ -93,18 +95,18 @@
         android:background="@drawable/btn_shape_senha"
         android:elevation="16dp"
         android:fontFamily="@font/inter_black"
-        android:text="Enviar código"
         android:onClick="gocode"
+        android:text="Enviar código"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_senha"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
-        app:layout_constraintVertical_bias="0.765"
+        app:layout_constraintVertical_bias="0.716"
         app:layout_constraintWidth_percent=".8" />
 
     <TextView
@@ -119,6 +121,7 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_senha"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
         app:layout_constraintVertical_bias="0.177" />
@@ -140,8 +143,8 @@
         android:layout_height="wrap_content"
         android:elevation="500dp"
         android:fontFamily="@font/inter_black"
-        android:text="Voltar para o login"
         android:onClick="voltar"
+        android:text="Voltar para o login"
         android:textAppearance="@style/esqueceu"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -150,7 +153,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
-        app:layout_constraintVertical_bias="0.933" />
+        app:layout_constraintVertical_bias="0.922" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

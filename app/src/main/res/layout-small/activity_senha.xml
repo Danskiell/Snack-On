@@ -52,7 +52,7 @@
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
-        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintVertical_bias="0.325" />
 
     <EditText
         android:id="@+id/inputRecEmail"
@@ -69,8 +69,10 @@
         android:textColorHint="@color/inputTextColor"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_senha"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
+        app:layout_constraintVertical_bias="0.565"
         app:layout_constraintWidth_percent=".8"></EditText>
 
     <View
@@ -119,9 +121,10 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_senha"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintVertical_bias="0.191" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -151,6 +154,7 @@
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
         app:layout_constraintVertical_bias="0.933" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

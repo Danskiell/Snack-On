@@ -1,6 +1,8 @@
 package com.example.snack;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +23,14 @@ public class SenhaActivity extends AppCompatActivity {
             return insets;
         });
     }
+    public void voltar(View view) {
+        startActivity(new Intent(SenhaActivity.this, LoginActivity.class));
 
+    }
+
+    public void gocode(View view) {
+        startActivity(new Intent(SenhaActivity.this, SenhaCodeActivity.class));
+    }
 
 
 }

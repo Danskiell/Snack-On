@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SenhaActivity">
+    tools:context=".SenhaCodeActivity">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -45,7 +45,7 @@
         android:layout_alignParentTop="true"
         android:elevation="16dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/desc1"
+        android:text="@string/desc2"
         android:textAppearance="@style/descStyle"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_senha"
@@ -59,11 +59,11 @@
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:background="@drawable/input_shape_email"
-        android:drawableLeft="@drawable/icon_email"
+        android:drawableLeft="@drawable/icon_password"
         android:drawablePadding="7dp"
         android:elevation="16dp"
         android:fontFamily="@font/inter_black"
-        android:hint="Email:"
+        android:hint="Confirmar código:"
         android:paddingStart="5dp"
         android:textColor="@color/inputTextColor"
         android:textColorHint="@color/inputTextColor"
@@ -141,8 +141,8 @@
         android:elevation="500dp"
         android:fontFamily="@font/inter_black"
         android:text="Voltar para o login"
-        android:onClick="voltar"
         android:textAppearance="@style/esqueceu"
+        android:onClick="voltar"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
@@ -151,6 +151,8 @@
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
         app:layout_constraintVertical_bias="0.933" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

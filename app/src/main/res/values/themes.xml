@@ -106,7 +106,11 @@
         <item name="fontFamily"> @font/inter</item>
     </style>
 
+    <style name="senhaBtn">
+        <item name="android:elevation">16dp</item>
+        <item name="backgroundTint">@color/buttonColor</item>
 
+    </style>
 
     <style name="Theme.Snack.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 <style name="Theme.Snack.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
