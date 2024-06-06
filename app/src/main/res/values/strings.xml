@@ -24,4 +24,9 @@
     <string name="price">R$ 0,00</string>
     <string name="carrinhoMainText"> Itens no Carrinho </string>
     <string name="menu_slideshow">Slideshow</string>
+
+    // Esqueceu sua senha
+    <string name="desc1"> Insira abaixo o e-mail utilizado durante o cadastro e enviaremos um link para você criar uma nova senha para a sua conta.</string>
+
+
 </resources>

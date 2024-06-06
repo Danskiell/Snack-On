@@ -269,16 +269,17 @@
         android:id="@+id/labeBebidas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-30dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="25dp"
         android:text="Bebidas"
         android:textColor="#616161"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/sugest"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bebidas"
-        app:layout_constraintVertical_bias="0.148"></TextView>
+        app:layout_constraintVertical_bias="0.0"></TextView>
 
     <ImageView
         android:id="@+id/iconHome"

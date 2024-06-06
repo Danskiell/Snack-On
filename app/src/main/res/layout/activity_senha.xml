@@ -21,21 +21,94 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ImageView>
 
+    <View
+        android:id="@+id/ellipse_img"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/eclipse_img"
+        android:elevation="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <TextView
+        android:id="@+id/insira_abai"
+        android:layout_width="280dp"
+        android:layout_height="53dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/desc1"
+        android:textAppearance="@style/descStyle"
+        android:elevation="16dp"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="319dp" />
+
+    <EditText
+        android:id="@+id/inputRecEmail"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/input_shape"
+        android:drawableLeft="@drawable/icon_email"
+        android:drawablePadding="7dp"
+        android:elevation="500dp"
+        android:fontFamily="@font/inter_black"
+        android:hint="Email:"
+        android:paddingStart="5dp"
+        android:textColor="@color/inputTextColor"
+        android:textColorHint="@color/inputTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".8"
+        tools:layout_editor_absoluteY="438dp"></EditText>
+
+    <View
+        android:id="@+id/rectangle_senha"
+        android:layout_width="317dp"
+        android:layout_height="477dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/retangulo_senha"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="500dp"
-        android:fontFamily="@font/lobster"
+        android:fontFamily="@font/inter_black"
         android:text="@string/senhaEsquecer"
-        android:textColor="@color/colorPrimary"
-        android:textSize="33sp"
         android:textAppearance="@style/esqueceu"
+        android:textColor="@color/black"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.313" />
+        app:layout_constraintVertical_bias="0.32" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="87dp"
+        android:layout_height="93dp"
+        android:elevation="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipse_img"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse_img"
+        app:layout_constraintStart_toStartOf="@+id/ellipse_img"
+        app:layout_constraintTop_toTopOf="@+id/ellipse_img"
+        app:srcCompat="@drawable/icon_conf_pass" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
