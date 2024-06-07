@@ -28,5 +28,7 @@
     // Esqueceu sua senha
     <string name="desc1"> Insira abaixo o e-mail utilizado durante o cadastro e enviaremos um link para você criar uma nova senha para a sua conta.</string>
     <string name="desc2"> Código enviado! Basta confirma-lo abaxio para prosseguir com a recuperação da sua senha. </string>
+    // Nova Senha
+    <string name="desc3"> Pronto! Agora basta criar e confirmar uma nova senha para acessar a sua conta.</string>
 
 </resources>

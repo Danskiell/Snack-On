@@ -45,17 +45,17 @@
         android:layout_alignParentTop="true"
         android:elevation="16dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/desc2"
+        android:text="@string/desc3"
         android:textAppearance="@style/descStyle"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_senha"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
-        app:layout_constraintVertical_bias="0.29" />
+        app:layout_constraintVertical_bias="0.341" />
 
     <EditText
-        android:id="@+id/inputRecEmail"
+        android:id="@+id/inputNovaSenha"
         android:layout_width="260dp"
         android:layout_height="40dp"
         android:background="@drawable/input_shape_email"
@@ -63,16 +63,38 @@
         android:drawablePadding="7dp"
         android:elevation="16dp"
         android:fontFamily="@font/inter_black"
-        android:hint="Confirmar código:"
+        android:hint="Nova senha:"
         android:paddingStart="5dp"
         android:textColor="@color/inputTextColor"
         android:textColorHint="@color/inputTextColor"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_senha"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
-        app:layout_constraintVertical_bias="0.498"
+        app:layout_constraintVertical_bias="0.524"
+        app:layout_constraintWidth_percent=".8"></EditText>
+
+    <EditText
+        android:id="@+id/inputSenha"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_shape_email"
+        android:drawableLeft="@drawable/icon_password"
+        android:drawablePadding="7dp"
+        android:elevation="16dp"
+        android:fontFamily="@font/inter_black"
+        android:hint="Confirmar senha:"
+        android:paddingStart="5dp"
+        android:textColor="@color/inputTextColor"
+        android:textColorHint="@color/inputTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_senha"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
+        app:layout_constraintVertical_bias="0.664"
         app:layout_constraintWidth_percent=".8"></EditText>
 
     <View
@@ -86,7 +108,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.47" />
 
     <android.widget.Button
         android:id="@+id/btnSenha"
@@ -95,7 +118,7 @@
         android:background="@drawable/btn_shape_senha"
         android:elevation="16dp"
         android:fontFamily="@font/inter_black"
-        android:onClick="mudarsenha"
+        android:onClick="validar"
         android:text="Confirmar"
         android:textAllCaps="false"
         android:textColor="#000000"
@@ -106,7 +129,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
-        app:layout_constraintVertical_bias="0.716"
+        app:layout_constraintVertical_bias="0.878"
         app:layout_constraintWidth_percent=".8" />
 
     <TextView
@@ -124,7 +147,7 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
         app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintVertical_bias="0.191" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -137,23 +160,8 @@
         app:layout_constraintTop_toTopOf="@+id/ellipse_img"
         app:srcCompat="@drawable/icon_conf_pass" />
 
-    <TextView
-        android:id="@+id/voltar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="500dp"
-        android:fontFamily="@font/inter_black"
-        android:onClick="voltar"
-        android:text="Voltar para o login"
-        android:textAppearance="@style/esqueceu"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_senha"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_senha"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_senha"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_senha"
-        app:layout_constraintVertical_bias="0.922" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
