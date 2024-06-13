@@ -39,8 +39,8 @@
 
     <TextView
         android:id="@+id/insira_abai"
-        android:layout_width="280dp"
-        android:layout_height="53dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:elevation="16dp"
