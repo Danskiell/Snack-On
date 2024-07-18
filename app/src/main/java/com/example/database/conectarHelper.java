@@ -1,4 +1,5 @@
 package com.example.database;
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -8,93 +9,83 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-// Criando classe extendendo as funções de abertura de banco
-public class conectarHelper extends SQLiteOpenHelper{
-    // Definindo caminho do banco
-    private static String DB_PATH = "C:\\Snack On App Final\\Snack-On\\app\\src\\main\\assets\\snackOn.db";
-    // Definindo nome do banco
-    private static String DB_NAME = "snackOn.db";
-    private final Context myContext;
-    private SQLiteDatabase myDatabase;
 
-    public conectarHelper(Context context){
-        super(context, DB_NAME, null, 1);
+public class conectarHelper extends SQLiteOpenHelper {
+    private static final int DB_VERSION = 1;
+    private static final String DB_NAME = "snackOn.db";
+    private SQLiteDatabase myDatabase;
+    private final Context myContext;
+
+    // Construtor
+    public conectarHelper(Context context) {
+        super(context, DB_NAME, null, DB_VERSION);
         this.myContext = context;
     }
 
-    public void criarBanco() throws IOException{
+    // Método para criar o banco, copiando da pasta assets se necessário
+    public void criarBanco() throws IOException {
         boolean dbExist = checkDataBase();
-        if(!dbExist){
+        if (!dbExist) {
             this.getReadableDatabase();
-            try{
+            try {
                 copyDataBase();
-            } catch (IOException e){
-                throw new Error("Erro ao copiar bacno");
+            } catch (IOException e) {
+                throw new Error("Erro ao copiar banco");
             }
         }
     }
 
-    private boolean checkDataBase(){
+    // Verifica se o banco de dados já existe
+    private boolean checkDataBase() {
         SQLiteDatabase checkDB = null;
-        try{
-            String caminho = DB_PATH + DB_NAME;
+        try {
+            String caminho = myContext.getDatabasePath(DB_NAME).getPath();
             checkDB = SQLiteDatabase.openDatabase(caminho, null, SQLiteDatabase.OPEN_READONLY);
 
-        } catch (SQLiteException e){
+        } catch (SQLiteException e) {
             // Banco não existe
         }
 
-        if(checkDB != null){
+        if (checkDB != null) {
             checkDB.close();
         }
         return checkDB != null;
     }
 
-    private void copyDataBase() throws IOException{
-        InputStream myImput = myContext.getAssets().open(DB_NAME);
-        String outFileName = DB_PATH + DB_NAME;
+    // Copia o banco de dados da pasta assets para o local de armazenamento do aplicativo
+    private void copyDataBase() throws IOException {
+        InputStream myInput = myContext.getAssets().open(DB_NAME);
+        String outFileName = myContext.getDatabasePath(DB_NAME).getPath();
         OutputStream myOutput = new FileOutputStream(outFileName);
         byte[] buffer = new byte[1024];
         int length;
-        while ((length = myImput.read(buffer)) > 0){
+        while ((length = myInput.read(buffer)) > 0) {
             myOutput.write(buffer, 0, length);
         }
         myOutput.flush();
         myOutput.close();
-        myImput.close();
+        myInput.close();
     }
 
-    public void abrirBanco() throws SQLiteException{
-        String caminho = DB_PATH + DB_NAME;
+    // Abre o banco de dados para leitura
+    public void abrirBanco() throws SQLiteException {
+        String caminho = myContext.getDatabasePath(DB_NAME).getPath();
         myDatabase = SQLiteDatabase.openDatabase(caminho, null, SQLiteDatabase.OPEN_READONLY);
     }
 
-@Override
-    public synchronized void close(){
-        if(myDatabase != null){
+    @Override
+    public synchronized void close() {
+        if (myDatabase != null) {
             myDatabase.close();
         }
         super.close();
-}
+    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
     }
-
-
-
-
-
-
-
-
-
-
-
 }
