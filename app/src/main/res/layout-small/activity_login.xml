@@ -47,6 +47,7 @@
         android:drawableLeft="@drawable/icon_password"
         android:drawablePadding="7dp"
         android:hint="Senha"
+        android:password="true"
         android:paddingStart="5dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"

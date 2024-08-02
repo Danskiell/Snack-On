@@ -284,7 +284,6 @@
         android:id="@+id/iconHome"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
@@ -297,14 +296,13 @@
         android:id="@+id/iconCart"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="-25dp"
         android:onClick="carrinho"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintHorizontal_bias="0.382"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.726"
+        app:layout_constraintVertical_bias="0.875"
         app:srcCompat="@drawable/icon_cart" />
 
     <ImageView
@@ -314,10 +312,10 @@
         android:layout_marginBottom="-25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintHorizontal_bias="0.635"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.726"
+        app:layout_constraintVertical_bias="0.781"
         app:srcCompat="@drawable/icon_search_nav" />
 
     <ImageView
@@ -328,10 +326,10 @@
         android:onClick="config"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.726"
+        app:layout_constraintVertical_bias="0.781"
         app:srcCompat="@drawable/icon_user_nav" />
 
 

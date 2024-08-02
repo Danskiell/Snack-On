@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.example.snack.ui.MacaraTelefone;
 
 import com.example.Gerenciar.Usuarios;
 
@@ -38,6 +39,8 @@ public class RegisterActivity extends AppCompatActivity {
         EditText confirmarSenhaEditText = findViewById(R.id.inputConfPass);
         Button buttonCadastro = findViewById(R.id.btnCadastro);
 
+        telefoneEditText.addTextChangedListener(new MacaraTelefone(telefoneEditText));
+
         buttonCadastro.setOnClickListener(view -> {
             String nome = nomeEditText.getText().toString();
             String sobrenome = sobrenomeEditText.getText().toString();
@@ -46,11 +49,17 @@ public class RegisterActivity extends AppCompatActivity {
             String senha = senhaEditText.getText().toString();
             String confirmarSenha = confirmarSenhaEditText.getText().toString();
 
-            if(!senha.equals(confirmarSenha)){
+            if(nome.isEmpty() || sobrenome.isEmpty() || email.isEmpty() || senha.isEmpty() || confirmarSenha.isEmpty()) {
+                Toast.makeText(RegisterActivity.this , "Preencha todos os campos", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            else if(!senha.equals(confirmarSenha)){
                 Toast.makeText(RegisterActivity.this, "As senhas precisam ser iguais", Toast.LENGTH_SHORT).show();
                 return;
             }
-            if (usuarios.adicionarUsuario(nome, sobrenome, email, telefone, senha)){
+
+            else if (usuarios.adicionarUsuario(nome, sobrenome, email, telefone, senha)){
                 Toast.makeText(RegisterActivity.this, "Usuário cadastrado", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }else {
