@@ -95,13 +95,50 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/SnacksImage"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/SnacksView"
+            app:layout_constraintEnd_toEndOf="@+id/SnacksView"
+            app:layout_constraintStart_toStartOf="@+id/SnacksView"
+            app:layout_constraintTop_toTopOf="@+id/SnacksView"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/snacks" />
+
+        <View
+            android:id="@+id/SnacksView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="320dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/category_shape"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></View>
+
+        <TextView
+            android:id="@+id/labelOutros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Outros"
+            android:textColor="#616161"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/SnacksView"
+            app:layout_constraintStart_toStartOf="@+id/SnacksView"
+            app:layout_constraintTop_toBottomOf="@+id/SnacksImage"></TextView>
+
         <View
             android:id="@+id/bebidas"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="152dp"
+            android:layout_marginTop="144dp"
             android:layout_marginEnd="28dp"
             android:background="@drawable/category_shape"
             app:layout_constraintEnd_toEndOf="parent"
@@ -159,17 +196,53 @@
             app:layout_constraintStart_toStartOf="@+id/salgados"
             app:layout_constraintTop_toBottomOf="@+id/salgados" />
 
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/doceView"
+            app:layout_constraintEnd_toEndOf="@+id/doceView"
+            app:layout_constraintStart_toStartOf="@+id/doceView"
+            app:layout_constraintTop_toTopOf="@+id/doceView"
+            app:srcCompat="@drawable/candycandy" />
+
+        <View
+            android:id="@+id/doceView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="144dp"
+            android:layout_marginEnd="148dp"
+            android:background="@drawable/category_shape"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></View>
+
+
+        <TextView
+            android:id="@+id/labelDoces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Doces"
+            android:textColor="#616161"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/doceView"
+            app:layout_constraintStart_toStartOf="@+id/doceView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9"></TextView>
 
         <TextView
             android:id="@+id/labeBebidas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:text="Bebidas"
             android:textColor="#616161"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="@+id/bebidas"
-            app:layout_constraintHorizontal_bias="0.181"
+            app:layout_constraintHorizontal_bias="0.636"
             app:layout_constraintStart_toStartOf="@+id/bebidas"
             app:layout_constraintTop_toBottomOf="@+id/bebidas"></TextView>
 
@@ -198,6 +271,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+        <TextView
+            android:id="@+id/labelLanches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Lanches"
+            android:textColor="#616161"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgLanches"
+            app:layout_constraintHorizontal_bias="0.411"
+            app:layout_constraintStart_toStartOf="@+id/imgLanches"
+            app:layout_constraintTop_toBottomOf="@+id/Lanches"></TextView>
 
         <TextView
             android:id="@+id/TextPedidos"
@@ -258,26 +344,42 @@
             app:layout_constraintStart_toStartOf="@+id/ViewDestaque1"></TextView>
 
 
-        <Button
-            android:id="@+id/BtnCart1"
-            android:layout_width="68dp"
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSenha"
+            app:layout_constraintEnd_toEndOf="@+id/btnSenha"
+            app:layout_constraintStart_toStartOf="@+id/btnSenha"
+            app:layout_constraintTop_toTopOf="@+id/btnSenha"
+            app:srcCompat="@drawable/icon_addcart" />
+
+        <android.widget.Button
+            android:id="@+id/btnSenha"
+            android:layout_width="111dp"
             android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/btn_cart_shape"
-            android:backgroundTintMode="@null"
-            android:backgroundTint="#FF7A00"
-            android:elevation="500dp"
+            android:elevation="4dp"
             android:fontFamily="@font/inter_black"
-            android:onClick="cadastro"
+            android:onClick="mudarsenha"
             android:textAllCaps="false"
             android:textColor="#000000"
             android:textSize="18sp"
-            tools:layout_editor_absoluteX="65dp"
-            tools:layout_editor_absoluteY="721dp" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ViewDestaque1"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque1"
+            app:layout_constraintTop_toBottomOf="@+id/imgDestaque1"
+            app:layout_constraintVertical_bias="0.0" />
 
         <View
             android:id="@+id/ViewDestaque1"
             android:layout_width="150dp"
-            android:layout_height="190dp"
+            android:layout_height="220dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="30dp"
@@ -289,7 +391,7 @@
         <View
             android:id="@+id/ViewDestaque2"
             android:layout_width="150dp"
-            android:layout_height="190dp"
+            android:layout_height="220dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="50dp"
@@ -302,7 +404,7 @@
         <View
             android:id="@+id/ViewDestaque3"
             android:layout_width="150dp"
-            android:layout_height="190dp"
+            android:layout_height="220dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="30dp"
@@ -314,7 +416,7 @@
         <View
             android:id="@+id/ViewDestaque5"
             android:layout_width="150dp"
-            android:layout_height="190dp"
+            android:layout_height="220dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="50dp"
@@ -396,6 +498,9 @@
             app:layout_constraintStart_toEndOf="@+id/TextPedidos"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_fire" />
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
