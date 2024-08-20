@@ -291,8 +291,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="480dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="520dp"
             android:gravity="top"
             android:text="Os mais pedidos"
             android:textAppearance="@style/TextPedido"
@@ -328,6 +328,19 @@
             app:layout_constraintTop_toBottomOf="@+id/imgDestaque1"></TextView>
 
         <TextView
+            android:id="@+id/labelPedidos1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:fontFamily="@font/inter"
+            android:text="56 Pedidos no mês"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque1"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque1"
+            app:layout_constraintTop_toBottomOf="@+id/labelDestaque1"></TextView>
+
+        <TextView
             android:id="@+id/Estrelas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -349,18 +362,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="6dp"
-            app:layout_constraintBottom_toBottomOf="@+id/btnSenha"
-            app:layout_constraintEnd_toEndOf="@+id/btnSenha"
-            app:layout_constraintStart_toStartOf="@+id/btnSenha"
-            app:layout_constraintTop_toTopOf="@+id/btnSenha"
+            app:layout_constraintBottom_toBottomOf="@+id/btnCartD1"
+            app:layout_constraintEnd_toEndOf="@+id/btnCartD1"
+            app:layout_constraintStart_toStartOf="@+id/btnCartD1"
+            app:layout_constraintTop_toTopOf="@+id/btnCartD1"
             app:srcCompat="@drawable/icon_addcart" />
 
         <android.widget.Button
-            android:id="@+id/btnSenha"
+            android:id="@+id/btnCartD1"
             android:layout_width="111dp"
             android:layout_height="34dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="45dp"
             android:background="@drawable/btn_cart_shape"
             android:elevation="4dp"
             android:fontFamily="@font/inter_black"
@@ -383,10 +396,26 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/container_destaque"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextPedidos" />
+
+        <TextView
+            android:id="@+id/EstrelasD2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="192dp"
+            android:drawableEnd="@drawable/icon_star"
+            android:drawablePadding="1dp"
+            android:elevation="6dp"
+            android:fontFamily="@font/inter_black"
+            android:text="4,6"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ViewDestaque2"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque2"></TextView>
 
         <View
             android:id="@+id/ViewDestaque2"
@@ -394,11 +423,83 @@
             android:layout_height="220dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/container_destaque"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextPedidos" />
+
+        <TextView
+            android:id="@+id/labelDestaque2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:fontFamily="@font/inter_black"
+            android:text="Pizza"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque2"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque2"
+            app:layout_constraintTop_toBottomOf="@+id/imgDestaque2"></TextView>
+
+        <TextView
+            android:id="@+id/labelPedidos2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:fontFamily="@font/inter"
+            android:text="52 Pedidos no mês"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque2"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque2"
+            app:layout_constraintTop_toBottomOf="@+id/labelDestaque2"></TextView>
+
+        <ImageView
+            android:id="@+id/imgCartD2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnCartD2"
+            app:layout_constraintEnd_toEndOf="@+id/btnCartD2"
+            app:layout_constraintStart_toStartOf="@+id/btnCartD2"
+            app:layout_constraintTop_toTopOf="@+id/btnCartD2"
+            app:srcCompat="@drawable/icon_addcart" />
+        
+        <android.widget.Button
+            android:id="@+id/btnCartD2"
+            android:layout_width="111dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/btn_cart_shape"
+            android:elevation="4dp"
+            android:fontFamily="@font/inter_black"
+            android:onClick="mudarsenha"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ViewDestaque2"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque2"
+            app:layout_constraintTop_toBottomOf="@+id/imgDestaque2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imgDestaque2"
+            android:layout_width="130dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/pizzapizza"
+            android:elevation="4dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque2"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque2"
+            app:layout_constraintTop_toTopOf="@+id/ViewDestaque2"></ImageView>
 
 
         <View
@@ -408,10 +509,99 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/container_destaque"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ViewDestaque1" />
+
+        <TextView
+            android:id="@+id/EstrelasD3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="192dp"
+            android:drawableEnd="@drawable/icon_star"
+            android:drawablePadding="1dp"
+            android:elevation="6dp"
+            android:fontFamily="@font/inter_black"
+            android:text="4,5"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ViewDestaque3"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque3"></TextView>
+
+
+        <TextView
+            android:id="@+id/labelDestaque3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:fontFamily="@font/inter_black"
+            android:text="Pastel"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque3"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque3"
+            app:layout_constraintTop_toBottomOf="@+id/imgDestaque3"></TextView>
+
+        <TextView
+            android:id="@+id/labelPedidos3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:fontFamily="@font/inter"
+            android:text="48 Pedidos no mês"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque3"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque3"
+            app:layout_constraintTop_toBottomOf="@+id/labelDestaque3"></TextView>
+
+        <ImageView
+            android:id="@+id/imgCartD3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnCartD3"
+            app:layout_constraintEnd_toEndOf="@+id/btnCartD3"
+            app:layout_constraintStart_toStartOf="@+id/btnCartD3"
+            app:layout_constraintTop_toTopOf="@+id/btnCartD3"
+            app:srcCompat="@drawable/icon_addcart" />
+
+        <android.widget.Button
+            android:id="@+id/btnCartD3"
+            android:layout_width="111dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/btn_cart_shape"
+            android:elevation="4dp"
+            android:fontFamily="@font/inter_black"
+            android:onClick="mudarsenha"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ViewDestaque3"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque3"
+            app:layout_constraintTop_toBottomOf="@+id/imgDestaque3"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imgDestaque3"
+            android:layout_width="130dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/pastelpastel"
+            android:elevation="4dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque3"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque3"
+            app:layout_constraintTop_toTopOf="@+id/ViewDestaque3"></ImageView>
 
         <View
             android:id="@+id/ViewDestaque5"
@@ -419,11 +609,100 @@
             android:layout_height="220dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/container_destaque"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ViewDestaque2" />
+
+        <TextView
+            android:id="@+id/EstrelasD4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="192dp"
+            android:drawableEnd="@drawable/icon_star"
+            android:drawablePadding="1dp"
+            android:elevation="6dp"
+            android:fontFamily="@font/inter_black"
+            android:text="4,6"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ViewDestaque5"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque5"></TextView>
+
+
+        <TextView
+            android:id="@+id/labelDestaque4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:fontFamily="@font/inter_black"
+            android:text="Bolo de cenoura"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque5"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque5"
+            app:layout_constraintTop_toBottomOf="@+id/imgDestaque4"></TextView>
+
+        <TextView
+            android:id="@+id/labelPedidos4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:fontFamily="@font/inter"
+            android:text="59 Pedidos no mês"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque5"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque5"
+            app:layout_constraintTop_toBottomOf="@+id/labelDestaque4"></TextView>
+
+        <ImageView
+            android:id="@+id/imgCartD4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnCartD4"
+            app:layout_constraintEnd_toEndOf="@+id/btnCartD4"
+            app:layout_constraintStart_toStartOf="@+id/btnCartD4"
+            app:layout_constraintTop_toTopOf="@+id/btnCartD4"
+            app:srcCompat="@drawable/icon_addcart" />
+
+        <android.widget.Button
+            android:id="@+id/btnCartD4"
+            android:layout_width="111dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/btn_cart_shape"
+            android:elevation="4dp"
+            android:fontFamily="@font/inter_black"
+            android:onClick="mudarsenha"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ViewDestaque5"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque5"
+            app:layout_constraintTop_toBottomOf="@+id/imgDestaque4"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imgDestaque4"
+            android:layout_width="150dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bolobolo"
+            android:elevation="4dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@+id/ViewDestaque5"
+            app:layout_constraintStart_toStartOf="@+id/ViewDestaque5"
+            app:layout_constraintTop_toTopOf="@+id/ViewDestaque5"></ImageView>
 
         <ImageView
             android:id="@+id/iconHome"
@@ -494,7 +773,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="475dp"
+            android:layout_marginTop="515dp"
             app:layout_constraintStart_toEndOf="@+id/TextPedidos"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_fire" />
