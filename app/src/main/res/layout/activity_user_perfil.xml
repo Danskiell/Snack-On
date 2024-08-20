@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserPerfil">
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTintMode="@null"
+        >
 
     <ImageView
         android:id="@+id/iconHome"
@@ -16,7 +22,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sugest"
         app:layout_constraintVertical_bias="0.875"
         app:srcCompat="@drawable/icon_home_checked" />
 
@@ -30,7 +35,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.353"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sugest"
         app:layout_constraintVertical_bias="0.875"
         app:srcCompat="@drawable/icon_cart" />
 
@@ -43,7 +47,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.614"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sugest"
         app:layout_constraintVertical_bias="0.781"
         app:srcCompat="@drawable/icon_search_nav" />
 
@@ -57,9 +60,142 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.879"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sugest"
         app:layout_constraintVertical_bias="0.781"
         app:srcCompat="@drawable/icon_user_nav" />
 
+        <ImageView
+            android:id="@+id/camera_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/trocarFoto"
+            app:layout_constraintEnd_toEndOf="@+id/trocarFoto"
+            app:layout_constraintStart_toStartOf="@+id/trocarFoto"
+            app:layout_constraintTop_toTopOf="@+id/trocarFoto"
+            app:srcCompat="@drawable/icon_camera" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/trocarFoto"
+            android:layout_width="43dp"
+            android:layout_height="42dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/mudar_foto"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/profileCircle"
+            app:layout_constraintEnd_toEndOf="@+id/profileCircle"
+            app:layout_constraintTop_toTopOf="@+id/profileCircle"
+            app:layout_constraintVertical_bias="0.933" />
+
+        <View
+            android:id="@+id/profileCircle"
+            android:layout_width="168dp"
+            android:layout_height="162dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/circle_photo"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nome_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="4dp"
+            android:gravity="center_vertical"
+            android:text="Nome do usuário(a)"
+            android:textAppearance="@style/nome_atual"
+            app:layout_constraintBottom_toTopOf="@+id/inputLastName"
+            app:layout_constraintStart_toStartOf="@+id/inputLastName" />
+
+        <EditText
+            android:id="@+id/inputLastName"
+            android:layout_width="340dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/input_shape_user_profile"
+            android:drawablePadding="7dp"
+            android:elevation="500dp"
+            android:fontFamily="@font/inter_black"
+            android:hint=""
+            android:paddingStart="5dp"
+            android:text="Nome nome"
+            android:textColor="@color/inputTextColor"
+            android:textColorHint="@color/inputTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileCircle"></EditText>
+
+
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:text="Email do usuário(a)"
+            android:textAppearance="@style/nome_atual"
+            app:layout_constraintBottom_toTopOf="@+id/inputEmail"
+            app:layout_constraintStart_toStartOf="@+id/inputEmail"></TextView>
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="340dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/input_shape_user_profile"
+            android:drawablePadding="7dp"
+            android:elevation="500dp"
+            android:fontFamily="@font/inter_black"
+            android:hint=""
+            android:paddingStart="5dp"
+            android:text="Email email"
+            android:textColor="@color/inputTextColor"
+            android:textColorHint="@color/inputTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputLastName"></EditText>
+
+
+        <TextView
+            android:id="@+id/email_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:text="Telefone do usuário(a)"
+            android:textAppearance="@style/nome_atual"
+            app:layout_constraintBottom_toTopOf="@+id/inputPhone"
+            app:layout_constraintStart_toStartOf="@+id/inputPhone"></TextView>
+
+        <EditText
+            android:id="@+id/inputPhone"
+            android:layout_width="340dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/input_shape_user_profile"
+            android:drawablePadding="7dp"
+            android:elevation="500dp"
+            android:fontFamily="@font/inter_black"
+            android:hint=""
+            android:paddingStart="5dp"
+            android:text="Phone phone"
+            android:textColor="@color/inputTextColor"
+            android:textColorHint="@color/inputTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

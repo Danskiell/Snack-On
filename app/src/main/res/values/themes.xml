@@ -112,6 +112,20 @@
 
     </style>
 
+
+    <!-- Tela do User Profile  -->
+    <style name="nome_atual">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FF7A00</item>
+        <item name="fontFamily"> @font/inter_black</item>
+    </style>
+
+    <style name="TextPedido">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">@font/inter_black</item>
+    </style>
+
     <style name="Theme.Snack.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 <style name="Theme.Snack.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
