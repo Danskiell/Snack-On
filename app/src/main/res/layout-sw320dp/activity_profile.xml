@@ -59,7 +59,7 @@
         android:layout_height="100dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="48dp"
         android:background="@drawable/back_circle"
         android:elevation="2dp"
@@ -177,7 +177,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.476"
-        app:srcCompat="@drawable/icon_cart" />
+        app:srcCompat="@drawable/icon_pedido" />
 
     <ImageView
         android:id="@+id/iconSearch"
@@ -211,7 +211,7 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/circle_container"
@@ -224,10 +224,11 @@
         android:id="@+id/containerPagamentos"
         android:layout_width="350dp"
         android:layout_height="70dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/container_profile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/containerNotificacoes"></View>
 
@@ -253,7 +254,7 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/circle_container"
@@ -266,10 +267,11 @@
         android:id="@+id/containerPerfil"
         android:layout_width="350dp"
         android:layout_height="70dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/container_profile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PhotoFrame"></View>
 
@@ -291,6 +293,7 @@
         app:layout_constraintVertical_bias="0.518"
         app:srcCompat="@drawable/icon_user_profile" />
 
+
     <TextView
         android:id="@+id/perfil"
         android:layout_width="wrap_content"
@@ -298,6 +301,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
         android:elevation="4dp"
         android:fontFamily="@font/inter_black"
         android:gravity="center_vertical"
@@ -309,8 +313,7 @@
         app:layout_constraintHorizontal_bias="0.012"
         app:layout_constraintStart_toEndOf="@+id/iconeUsuario"
         app:layout_constraintTop_toTopOf="@+id/containerPerfil"
-        app:layout_constraintVertical_bias="0.409" />
-
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/configura_e"
@@ -333,17 +336,18 @@
         app:layout_constraintTop_toTopOf="@+id/containerPerfil"
         app:layout_constraintVertical_bias="0.484" />
 
+
     <View
         android:id="@+id/containerNotificacoes"
         android:layout_width="350dp"
         android:layout_height="70dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/container_profile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/containerPerfil"></View>
-
 
     <View
         android:id="@+id/PerfilNotif"
@@ -351,7 +355,7 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/circle_container"
@@ -384,6 +388,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
         android:elevation="4dp"
         android:fontFamily="@font/inter_black"
         android:gravity="center_vertical"
@@ -394,7 +399,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/PerfilNotif"
         app:layout_constraintTop_toTopOf="@+id/containerNotificacoes"
-        app:layout_constraintVertical_bias="0.388" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/minha_centr"
@@ -443,7 +448,7 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/circle_container"
@@ -456,10 +461,11 @@
         android:id="@+id/containerConfig"
         android:layout_width="350dp"
         android:layout_height="70dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/container_profile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/containerPagamentos"></View>
 
@@ -487,6 +493,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
         android:elevation="4dp"
         android:fontFamily="@font/inter_black"
         android:gravity="center_vertical"
@@ -497,7 +504,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/PerfilConfig"
         app:layout_constraintTop_toTopOf="@+id/containerConfig"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/configuracoes"
@@ -526,6 +533,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
         android:elevation="4dp"
         android:fontFamily="@font/inter_black"
         android:gravity="center_vertical"
@@ -533,10 +541,10 @@
         android:textAppearance="@style/notifica_es"
         app:layout_constraintBottom_toBottomOf="@+id/containerPagamentos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.005"
         app:layout_constraintStart_toEndOf="@+id/PerfilPagamentos"
         app:layout_constraintTop_toTopOf="@+id/containerPagamentos"
-        app:layout_constraintVertical_bias="0.388" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -728,7 +728,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view"
             app:layout_constraintVertical_bias="0.392"
-            app:srcCompat="@drawable/icon_cart" />
+            app:srcCompat="@drawable/icon_pedido" />
 
         <ImageView
             android:id="@+id/iconSearch"

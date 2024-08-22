@@ -5,7 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:id="@+id/main"
+    tools:context=".UserPerfil"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,55 +16,81 @@
         android:backgroundTintMode="@null"
         >
 
-    <ImageView
-        android:id="@+id/iconHome"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.875"
-        app:srcCompat="@drawable/icon_home_checked" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="350dp"
+            android:layout_height="66dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/navigation_container"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Editar"
+            app:layout_constraintVertical_bias="0.571"></View>
 
-    <ImageView
-        android:id="@+id/iconCart"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="20dp"
-        android:onClick="carrinho"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.353"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.875"
-        app:srcCompat="@drawable/icon_cart" />
+        <ImageView
+            android:id="@+id/iconHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintVertical_bias="0.526"
+            app:srcCompat="@drawable/icon_home_checked" />
 
-    <ImageView
-        android:id="@+id/iconSearch"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.614"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.781"
-        app:srcCompat="@drawable/icon_search_nav" />
+        <ImageView
+            android:id="@+id/iconCart"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp"
+            android:onClick="carrinho"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.305"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintVertical_bias="0.526"
+            app:srcCompat="@drawable/icon_pedido" />
 
-    <ImageView
-        android:id="@+id/iconUser"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="20dp"
-        android:onClick="config"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.879"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.781"
-        app:srcCompat="@drawable/icon_user_nav" />
+        <ImageView
+            android:id="@+id/iconSearch"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="116dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintVertical_bias="0.526"
+            app:srcCompat="@drawable/icon_search_nav" />
+
+        <ImageView
+            android:id="@+id/iconUser"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:elevation="4dp"
+            android:onClick="config"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintVertical_bias="0.434"
+            app:srcCompat="@drawable/icon_user_nav" />
 
         <ImageView
             android:id="@+id/camera_icon"
@@ -113,11 +142,12 @@
             app:layout_constraintBottom_toTopOf="@+id/inputLastName"
             app:layout_constraintStart_toStartOf="@+id/inputLastName" />
 
+
         <EditText
             android:id="@+id/inputLastName"
             android:layout_width="340dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="76dp"
             android:background="@drawable/input_shape_user_profile"
             android:drawablePadding="7dp"
             android:elevation="500dp"
@@ -131,7 +161,6 @@
             app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profileCircle"></EditText>
-
 
         <TextView
             android:id="@+id/email_label"
@@ -148,7 +177,7 @@
         <EditText
             android:id="@+id/inputEmail"
             android:layout_width="340dp"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/input_shape_user_profile"
             android:drawablePadding="7dp"
@@ -180,7 +209,7 @@
         <EditText
             android:id="@+id/inputPhone"
             android:layout_width="340dp"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/input_shape_user_profile"
             android:drawablePadding="7dp"
@@ -194,6 +223,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+        <android.widget.Button
+            android:id="@+id/Editar"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/btn_editar_shape"
+            android:drawableRight="@drawable/icon_pencil"
+            android:elevation="16dp"
+            android:fontFamily="@font/inter_black"
+            android:onClick="gocode"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Editar perfil"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputPhone"
+            app:layout_constraintVertical_bias="0.004" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
