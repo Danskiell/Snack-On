@@ -40,5 +40,9 @@ public class ProfileActivity extends AppCompatActivity {
         startActivity(new Intent(ProfileActivity.this, UserPerfil.class));
     }
 
+    public void fechar(View view){
+        finish();
+    }
+
 
 }
