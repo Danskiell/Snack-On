@@ -38,7 +38,7 @@ public class ComandaController {
         if(existingComanda == null){
             return ResponseEntity.notFound().build();
         }
-        comanda.setId(id);
+        comanda.setId_Comanda(id);
         return ResponseEntity.ok(comandaService.saveComanda(comanda));
     }
 
@@ -48,7 +48,7 @@ public class ComandaController {
         if(existingComanda == null){
             return ResponseEntity.notFound().build();
         }
-        comandaService.deleteComandaById(id);
+        comandaService.deleteComanda(id);
         return ResponseEntity.noContent().build();
     }
 

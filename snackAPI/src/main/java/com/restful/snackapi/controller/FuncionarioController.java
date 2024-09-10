@@ -38,7 +38,7 @@ public class FuncionarioController {
         if(existingFuncionario == null){
             return ResponseEntity.notFound().build();
         }
-        funcionarioService.deleteFuncionario(id);
+        funcionarioService.deleteFuncionarioById(id);
         return ResponseEntity.noContent().build();
     }
 

@@ -14,12 +14,12 @@ public class MovimentacaoController {
 
     @GetMapping
     public List<Movimentacao> getAllMovimentacoes() {
-        return movimentacaoService.getAllMovimentacoes();
+        return movimentacaoService.getAllMovimentacao();
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Movimentacao> getMovimentacaoById(@PathVariable Long id) {
-        Movimentacao movimentacao = movimentacaoService.get.MovimentacaoById(id);
+        Movimentacao movimentacao = movimentacaoService.getMovimentacaoById(id);
         if(movimentacao == null){
             return ResponseEntity.notFound().build();
         }
@@ -37,7 +37,7 @@ public class MovimentacaoController {
         if(existingMovimentacao == null){
             return ResponseEntity.notFound().build();
         }
-        movimentacao.setIdMov(id);
+        movimentacao.setId_Mov(id);
         return ResponseEntity.ok(movimentacaoService.saveMovimentacao(movimentacao));
 
     }

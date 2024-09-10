@@ -14,7 +14,7 @@ public class FPgtoController {
 
     @GetMapping
     public List<F_Pgto> getAllFPgtos(){
-        return fPgtoService.getAllFPgtos();
+        return fPgtoService.getAllF_Pgtos();
     }
 
     @GetMapping("/{id}")
@@ -28,7 +28,7 @@ public class FPgtoController {
 
     @PostMapping
     public F_Pgto createF_Pgto(@RequestBody F_Pgto fPgto) {
-        return fPgtoService.saveFPgto(fPgto);
+        return fPgtoService.saveF_Pgto(fPgto);
     }
 
     @PutMapping("/{id}")
@@ -37,7 +37,7 @@ public class FPgtoController {
         if (existingF_Pgto == null) {
             return ResponseEntity.notFound().build();
         }
-        fPgtoService.setIdFPgto(id);
+        fPgto.setId_Pgto(id);
         return ResponseEntity.ok(fPgtoService.saveF_Pgto(fPgto));
 
     }

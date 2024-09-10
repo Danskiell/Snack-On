@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CategProdRepository extends JpaRepository<categ_Prod, Long>{
+public interface CategProdRepository extends JpaRepository<Categ_Prod, Long>{
     // Espaço reservado para consultas SQL
 
 }

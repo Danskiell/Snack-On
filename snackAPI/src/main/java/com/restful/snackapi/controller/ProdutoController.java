@@ -38,7 +38,7 @@ public class ProdutoController {
         if (existingProduto == null) {
             return ResponseEntity.notFound().build();
         }
-        produto.setId(id);
+        produto.setId_Produto(id);
         return ResponseEntity.ok(produtoService.saveProduto(produto));
     }
 
@@ -48,7 +48,7 @@ public class ProdutoController {
         if (existingProduto == null) {
             return ResponseEntity.notFound().build();
         }
-        produtoService.deleteProdutoById(id);
+        produtoService.deleteProduto(id);
         return ResponseEntity.noContent().build();
     }
 }

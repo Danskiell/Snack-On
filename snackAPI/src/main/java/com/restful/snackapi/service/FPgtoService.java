@@ -8,22 +8,22 @@ import java.util.List;
 @Service
 public class FPgtoService {
     @Autowired
-    private FPgtoService fPgtoService;
+    private FPgtoRepository fPgtoRepository;
 
     public List<F_Pgto> getAllF_Pgtos() {
-        return fPgtoService.findAll();
+        return fPgtoRepository.findAll();
     }
 
     public F_Pgto getF_PgtoById(Long id) {
-        return fPgtoService.findById(id).orElse(null);
+        return fPgtoRepository.findById(id).orElse(null);
     }
 
     public F_Pgto saveF_Pgto(F_Pgto ptgto) {
-        return fPgtoService.save(ptgto);
+        return fPgtoRepository.save(ptgto);
     }
 
     public void deleteF_PgtoById(Long id) {
-        fPgtoService.deleteById(id);
+        fPgtoRepository.deleteById(id);
     }
 
 
