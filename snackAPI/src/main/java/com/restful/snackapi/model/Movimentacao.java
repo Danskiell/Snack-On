@@ -1,4 +1,4 @@
-package com.restful.snackon.model;
+package com.restful.snackapi.model;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
@@ -18,7 +18,7 @@ public class Movimentacao {
 
     @ManyToOne
     @JoinColumn(name = "fk_Fun_id_Fun", nullable = false)
-    private Funcionario funcionario
+    private Funcionario funcionario;
 
     public Long getId_Mov() {
         return id_Mov;

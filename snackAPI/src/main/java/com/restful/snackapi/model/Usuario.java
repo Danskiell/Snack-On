@@ -1,4 +1,4 @@
-package com.restful.snackon.model;
+package com.restful.snackapi.model;
 import jakarta.persistence.*;
 
 @Entity

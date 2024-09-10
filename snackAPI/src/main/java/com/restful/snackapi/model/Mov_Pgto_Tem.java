@@ -1,10 +1,10 @@
-package com.restful.snackon.model;
+package com.restful.snackapi.model;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Mov_Pgto_Tem")
 public class Mov_Pgto_Tem{
-    @id
+    @Id
     @ManyToOne
     @JoinColumn(name = "fk_Movimentacao_id_Mov", nullable = false)
     private Movimentacao movimentacao;

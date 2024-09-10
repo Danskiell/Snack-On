@@ -1,10 +1,10 @@
-package com.restful.snackon.model;
+package com.restful.snackapi.model;
 import jakarta.persistence.*;
 
-@Entitiy
+@Entity
 @Table(name = "Funcionario")
 public class Funcionario {
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_Fun;
 

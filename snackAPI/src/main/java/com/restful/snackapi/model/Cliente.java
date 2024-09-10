@@ -1,10 +1,10 @@
-package com.restful.snackon.model;
+package com.restful.snackapi.model;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Cliente")
 public class Cliente {
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_Cliente;
 

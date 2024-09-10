@@ -27,6 +27,15 @@
         app:layout_constraintVertical_bias="0.0" />
 
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="281dp"
+        android:background="@drawable/carrinho_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"></View>
+
     <TextView
         android:id="@+id/total_"
         android:layout_width="wrap_content"
@@ -81,66 +90,87 @@
         android:text="Retornar ao menu"
         android:textAppearance="@style/retornarText"
         android:onClick="gohome"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCadastro"
         app:layout_constraintVertical_bias="0.126" />
 
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="350dp"
+        android:layout_height="66dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/navigation_container"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/iconHome"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="4dp"
         android:onClick="gohome"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.875"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.214"
         app:srcCompat="@drawable/icon_home" />
 
     <ImageView
         android:id="@+id/iconCart"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="4dp"
         android:onClick="carrinho"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.376"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.726"
+        app:layout_constraintHorizontal_bias="0.354"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.2"
         app:srcCompat="@drawable/icon_pedido_check" />
 
     <ImageView
         android:id="@+id/iconSearch"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.726"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.2"
         app:srcCompat="@drawable/icon_search_nav" />
 
     <ImageView
         android:id="@+id/iconUser"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="4dp"
         android:onClick="config"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.856"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.883"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sugest"
-        app:layout_constraintVertical_bias="0.726"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.157"
         app:srcCompat="@drawable/icon_user_nav" />
 
     <TextView

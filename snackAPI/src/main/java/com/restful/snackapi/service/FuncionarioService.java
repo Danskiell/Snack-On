@@ -1,5 +1,5 @@
 package com.restful.snackapi.service;
-import com.restful.snackapi.model.Funcioario;
+import com.restful.snackapi.model.Funcionario;
 import com.restful.snackapi.repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

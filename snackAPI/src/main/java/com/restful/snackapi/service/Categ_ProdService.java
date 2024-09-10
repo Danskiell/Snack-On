@@ -1,6 +1,6 @@
 package com.restful.snackapi.service;
 import com.restful.snackapi.model.Categ_Prod;
-import com.restful.snackapi.repository.Categ_ProdRepository;
+import com.restful.snackapi.repository.CategProdRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

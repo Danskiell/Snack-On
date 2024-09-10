@@ -1,10 +1,10 @@
-package com.seuprojeto.model;
-import javax.persistence.*;
+package com.restful.snackapi.model;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Comanda")
 public class Comanda {
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_Comanda;
 

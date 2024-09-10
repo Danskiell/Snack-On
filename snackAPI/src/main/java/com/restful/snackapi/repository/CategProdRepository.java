@@ -1,5 +1,5 @@
 package com.restful.snackapi.repository;
-import coom.restful.snackapi.model.categ_Prod;
+import com.restful.snackapi.model.Categ_Prod;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

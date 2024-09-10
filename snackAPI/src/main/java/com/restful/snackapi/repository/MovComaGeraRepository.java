@@ -1,5 +1,5 @@
 package com.restful.snackapi.repository;
-import coom.restful.snackapi.model.Mov_Coma_Gera;
+import com.restful.snackapi.model.Mov_Coma_Gera;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,5 +1,5 @@
 package com.restful.snackapi.repository;
-import coom.restful.snackapi.model.F_Pgto;
+import com.restful.snackapi.model.F_Pgto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

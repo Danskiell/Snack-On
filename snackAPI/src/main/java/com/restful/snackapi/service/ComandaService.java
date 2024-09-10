@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ComandaService({
+public class ComandaService{
     @Autowired
     private ComandaRepository comandaRepository;
 

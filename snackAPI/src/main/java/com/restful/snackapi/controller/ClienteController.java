@@ -39,7 +39,7 @@ public class ClienteController {
         if (existingCliente == null) {
             return ResponseEntity.notFound().build();
         }
-        cliente.setIdCliente(id);
+        cliente.setId_Cliente(id);
         return ResponseEntity.ok(clienteService.saveCliente(cliente));
     }
 
