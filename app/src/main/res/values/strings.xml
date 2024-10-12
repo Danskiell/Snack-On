@@ -1,4 +1,6 @@
 <resources>
+    <string name="com_auth0_client_id">j04b2zm0hmt9nLJQIsuOekzZEZFEq9Ip</string>
+    <string name="com_auth0_domain">dev-r1uf0w8hoq10d3ef.us.auth0.com</string>
     <string name="app_name">Snack</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

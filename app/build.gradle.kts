@@ -14,6 +14,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders.putAll(
+        mapOf(
+            "auth0Domain" to "dev-r1uf0w8hoq10d3ef.us.auth0.com",
+            "auth0Scheme" to "com.example.snack"
+        ))
     }
 
     buildTypes {
@@ -23,8 +29,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures {
         viewBinding = true
@@ -44,4 +50,7 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation("com.auth0.android:auth0:2.0.0")
+    implementation("com.auth0.android:jwtdecode:2.0.0")
+
 }

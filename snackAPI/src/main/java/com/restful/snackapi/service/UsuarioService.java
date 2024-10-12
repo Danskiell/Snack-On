@@ -3,7 +3,10 @@ import com.restful.snackapi.model.Usuario;
 import com.restful.snackapi.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioService {
@@ -14,12 +17,12 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    public Usuario getUsuarioById(Long id) {
-        return usuarioRepository.findById(id).orElse(null);
+    public Optional<Usuario> getUsuarioById(Long id) {
+        return usuarioRepository.findById(id);
     }
 
-    public Usuario getUsuarioByEmail(String email) {
-        return usuarioRepository.findByEmail_Usuario(email).orElse(null);
+    public Optional<Usuario> getUsuarioByEmail(String email) {
+        return usuarioRepository.findByEmail_Usuario(email);
     }
 
     public Usuario saveUsuario(Usuario usuario) {
