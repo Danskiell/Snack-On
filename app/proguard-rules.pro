@@ -19,3 +19,9 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class com.auth0.**
+-keep class retrofit2.**
+-keepattributes Signature
+-dontwarn okhttp3.**
+-dontwarn okhttp3.**
