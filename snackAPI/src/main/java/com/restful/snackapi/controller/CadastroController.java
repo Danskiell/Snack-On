@@ -30,7 +30,10 @@ public class CadastroController {
 
             );
         }catch (RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+            if (e.getMessage().equals("Email já cadastrado!")){
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+        }
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro no servidor Snack");
         }
 
     }

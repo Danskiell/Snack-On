@@ -20,7 +20,7 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/cadastro/**").permitAll()
+                        .requestMatchers("/api/cadastro/**", "/api/login/**").permitAll()
                         .anyRequest().authenticated()
                 );
         return http.build();

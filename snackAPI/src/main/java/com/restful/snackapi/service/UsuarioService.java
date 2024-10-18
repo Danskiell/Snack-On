@@ -3,6 +3,7 @@ import com.restful.snackapi.model.Usuario;
 import com.restful.snackapi.repository.UsuarioRepository;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 import java.util.Date;
+import java.security.Key;
 
 @Service
 public class UsuarioService {
@@ -17,36 +19,8 @@ public class UsuarioService {
     private UsuarioRepository usuarioRepository;
 
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-    private final String SECRET_KEY = "snackonmelhorappdecantinas";
+    private final Key SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS512);
 
-
-    public List<Usuario> getAllUsuarios() {
-        return usuarioRepository.findAll();
-    }
-
-    public Optional<Usuario> getUsuarioById(Long id) {
-        return usuarioRepository.findById(id);
-    }
-
-    public Optional<Usuario> getUsuarioByEmail(String email) {
-        return usuarioRepository.findByEmail_Usuario(email);
-    }
-
-    public Usuario saveUsuario(Usuario usuario) {
-        return usuarioRepository.save(usuario);
-    }
-
-    public void deleteUsuario(Long id) {
-        usuarioRepository.deleteById(id);
-    }
-
-    public void registrarOuAtualizar(String email, String nome) {
-        Usuario usuario = usuarioRepository.findByEmail_Usuario(email)
-                .orElse(new Usuario());
-        usuario.setEmail_Usuario(email);
-        usuario.setNome_Usuario(nome);
-        usuarioRepository.save(usuario);
-    }
 
     public Usuario cadastrarUsuario(Usuario usuario){
         // Verificando se ja tem esse email no banco
@@ -76,7 +50,49 @@ public class UsuarioService {
                 .compact();
     }
 
+    public Usuario login(String email, String senha){
+        // Buscando email para ver se ja existe
+        Optional<Usuario> usuarioOptional = usuarioRepository.findByEmail_Usuario(email);
+        if (usuarioOptional.isEmpty()){
+            throw new RuntimeException("Email não encontrado!");
+        }
+        Usuario usuario = usuarioOptional.get();
 
+        // Verificando se a senha esta certa com o Bcrypt
+        if (!passwordEncoder.matches(senha, usuario.getSenha())){
+            throw new RuntimeException("Senha inválida!");
+        }
+        // Retornando o usuario se tudo estiver correto
+        return usuario;
+    }
+
+    public List<Usuario> getAllUsuarios() {
+        return usuarioRepository.findAll();
+    }
+
+    public Optional<Usuario> getUsuarioById(Long id) {
+        return usuarioRepository.findById(id);
+    }
+
+    public Optional<Usuario> getUsuarioByEmail(String email) {
+        return usuarioRepository.findByEmail_Usuario(email);
+    }
+
+    public Usuario saveUsuario(Usuario usuario) {
+        return usuarioRepository.save(usuario);
+    }
+
+    public void deleteUsuario(Long id) {
+        usuarioRepository.deleteById(id);
+    }
+
+    public void registrarOuAtualizar(String email, String nome) {
+        Usuario usuario = usuarioRepository.findByEmail_Usuario(email)
+                .orElse(new Usuario());
+        usuario.setEmail_Usuario(email);
+        usuario.setNome_Usuario(nome);
+        usuarioRepository.save(usuario);
+    }
 
 
 
