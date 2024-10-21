@@ -15,10 +15,18 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.example.snack.ui.MacaraTelefone;
 
-import com.example.Gerenciar.Usuarios;
+import com.example.snack.model.Usuario;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class RegisterActivity extends AppCompatActivity {
-    private Usuarios usuarios;
+    private EditText editTextNome, editTextSobrenome, editTextEmail,
+            editTextTelefone, editTextSenha, editTextConfirmarSenha;
+
+    private Button buttonRegister;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    usuarios = new Usuarios(this);
+
 
         EditText nomeEditText = findViewById(R.id.inputName);
         EditText sobrenomeEditText = findViewById(R.id.inputLastName);
@@ -59,16 +67,36 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
 
-            else if (usuarios.adicionarUsuario(nome, sobrenome, email, telefone, senha)){
-                Toast.makeText(RegisterActivity.this, "Usuário cadastrado", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-            }else {
-                Toast.makeText(RegisterActivity.this, "Falha ao cadastrar", Toast.LENGTH_SHORT).show();
-            }
+            // Criando o objeto do usuario
+            Usuario usuario = new Usuario(email, nome, sobrenome, null, senha, telefone);
+
+            // Chamando a API para cadastrar o usuario
+            ApiService apiService = RetrofitClient.getRetrofitInstance()
+                    .create(ApiService.class);
+
+            Call<Usuario> call = apiService.cadastrarUsuario(usuario);
+            call.enqueue(new Callback<Usuario>() {
+                @Override
+                public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                    if(response.isSuccessful() && response.body() != null) {
+                        Toast.makeText(RegisterActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(RegisterActivity.this, "Erro ao cadastrar, tente novamente!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Usuario> call, Throwable t){
+                Toast.makeText(RegisterActivity.this, "Erro ao conectar com o servidor", Toast.LENGTH_SHORT).show();}
+
+        });
         });
 
 
-    }
 
+
+    }
 
 }
