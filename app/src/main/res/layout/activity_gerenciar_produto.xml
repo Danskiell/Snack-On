@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GerenciarProdutoActivity">
+
+    <View
+        android:id="@+id/rectangle"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/profile_rectangle_func"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"></View>
+
+
+    <View
+        android:id="@+id/rectangl_whit"
+        android:layout_width="195dp"
+        android:layout_height="67dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/profile_rectangle_white"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle"
+        app:layout_constraintStart_toStartOf="@+id/rectangle"
+        app:layout_constraintTop_toTopOf="@+id/rectangle" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="4dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="Gerenciar alimento"
+        android:textAppearance="@style/perfil"
+        android:textColor="#FF7A00"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangl_whit"
+        app:layout_constraintEnd_toEndOf="@+id/rectangl_whit"
+        app:layout_constraintStart_toStartOf="@+id/rectangl_whit"
+        app:layout_constraintTop_toTopOf="@+id/rectangl_whit" />
+
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="148dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="Nome"
+        android:textAppearance="@style/input_label"
+        android:textColor="#FF7A00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputNomeProduto"
+        android:layout_width="275dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/input_shape_user_profile"
+        android:fontFamily="@font/inter_black"
+        android:hint="Insira o nome do alimento:"
+        android:paddingStart="5dp"
+        android:textColor="@color/inputTextColor"
+        android:textColorHint="@color/inputTextColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".8"></EditText>
+
+    <TextView
+        android:id="@+id/categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="236dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="Categoria"
+        android:textAppearance="@style/input_label"
+        android:textColor="#FF7A00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/dropDown"
+        android:layout_width="275dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="268dp"
+        android:background="@drawable/input_shape_user_profile"
+        android:fontFamily="@font/inter_black"
+        android:hint="Selecione a categoria"
+        android:paddingStart="5dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></AutoCompleteTextView>
+
+    <TextView
+        android:id="@+id/Descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="324dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="Descrição"
+        android:textColor="#FF7A00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputDescProduto"
+        android:layout_width="275dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="356dp"
+        android:background="@drawable/input_shape_user_profile"
+        android:fontFamily="@font/inter_black"
+        android:hint="Insira a descrição do alimento:"
+        android:paddingStart="5dp"
+        android:textColor="@color/inputTextColor"
+        android:textColorHint="@color/inputTextColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".8"></EditText>
+
+    <TextView
+        android:id="@+id/Preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="412dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="Preço"
+        android:textAppearance="@style/input_label"
+        android:textColor="#FF7A00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/inputPrecoProduto"
+        android:layout_width="275dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="444dp"
+        android:background="@drawable/input_shape_user_profile"
+        android:fontFamily="@font/inter_black"
+        android:hint="Insira a descrição do alimento:"
+        android:paddingStart="5dp"
+        android:textColor="@color/inputTextColor"
+        android:textColorHint="@color/inputTextColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
+
+    <TextView
+        android:id="@+id/foto_do_ali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="510dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Foto do alimento"
+        android:textAppearance="@style/alimento_label"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageContainer"
+        app:layout_constraintStart_toStartOf="@+id/imageContainer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imageContainer"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="542dp"
+        android:background="@drawable/square_corner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/buttonUpload"
+        android:layout_width="170dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="252dp"
+        android:background="@drawable/btn_editar_shape"
+        android:elevation="16dp"
+        android:fontFamily="@font/inter_black"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Alterar foto"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageContainer"
+        app:layout_constraintTop_toTopOf="@+id/imageContainer"
+        app:layout_constraintVertical_bias="0.326" />
+
+    <android.widget.Button
+        android:id="@+id/Editar"
+        android:layout_width="170dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_image_shape"
+        android:elevation="16dp"
+        android:fontFamily="@font/inter_black"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Remover foto"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageContainer"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUpload"
+        app:layout_constraintVertical_bias="0.075" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

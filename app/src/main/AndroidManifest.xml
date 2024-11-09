@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
-    <uses-permission android:name="android.permission.INTERNET" />
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,9 +13,13 @@
         android:roundIcon="@drawable/snack_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Snack"
-        tools:targetApi="31" >
-
-
+        tools:targetApi="31">
+        <activity
+            android:name=".GerenciarProdutoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FuncionarioActivity"
+            android:exported="false" />
         <activity
             android:name=".UserPerfil"
             android:exported="false" />
@@ -50,38 +54,37 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.Snack.NoActionBar" >
+            android:theme="@style/Theme.Snack.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
-                    android:scheme="com.example.snack"
                     android:host="dev-r1uf0w8hoq10d3ef.us.auth0.com"
-                    android:pathPrefix="/android/com.example.snack/callback" />
+                    android:pathPrefix="/android/com.example.snack/callback"
+                    android:scheme="com.example.snack" />
             </intent-filter>
         </activity>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
         <meta-data
             android:name="com.auth0.domain"
-            android:value="${auth0Domain}"/>
-
+            android:value="${auth0Domain}" />
         <meta-data
             android:name="com.auth0.scheme"
-            android:value="${auth0Scheme}"/>
+            android:value="${auth0Scheme}" />
     </application>
 
 </manifest>

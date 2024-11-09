@@ -2,44 +2,44 @@ package com.example.snack.model;
 
 public class Usuario {
 
-    private String email_usuario;
-    private String nome_usuario;
-    private String sobrenome_usuario;
+    private String email_Usuario;
+    private String nome_Usuario;
+    private String sobrenome_Usuario;
     private String cargo;
-    private String senha_usuario;
-    private String telefone;
+    private String senha;
+    private String fone_Usuario;
 
     public Usuario(String email_usuario, String nome_usuario, String sobrenome_usuario, String cargo, String senha_usuario, String telefone) {
-        this.email_usuario = email_usuario;
-        this.nome_usuario = nome_usuario;
-        this.sobrenome_usuario = sobrenome_usuario;
+        this.email_Usuario = email_usuario;
+        this.nome_Usuario = nome_usuario;
+        this.sobrenome_Usuario = sobrenome_usuario;
         this.cargo = cargo;
-        this.senha_usuario = senha_usuario;
-        this.telefone = telefone;
+        this.senha = senha_usuario;
+        this.fone_Usuario = telefone;
     }
 
     public String getEmail_usuario() {
-        return email_usuario;
+        return email_Usuario;
     }
 
     public void setEmail_usuario(String email_usuario) {
-        this.email_usuario = email_usuario;
+        this.email_Usuario = email_usuario;
     }
 
     public String getNome_usuario() {
-        return nome_usuario;
+        return nome_Usuario;
     }
 
     public void setNome_usuario(String nome_usuario) {
-        this.nome_usuario = nome_usuario;
+        this.nome_Usuario = nome_usuario;
     }
 
     public String getSobrenome_usuario() {
-        return sobrenome_usuario;
+        return sobrenome_Usuario;
     }
 
     public void setSobrenome_usuario(String sobrenome_usuario) {
-        this.sobrenome_usuario = sobrenome_usuario;
+        this.sobrenome_Usuario = sobrenome_usuario;
     }
 
     public String getCargo() {
@@ -51,18 +51,18 @@ public class Usuario {
     }
 
     public String getSenha_usuario() {
-        return senha_usuario;
+        return senha;
     }
 
     public void setSenha_usuario(String senha_usuario) {
-        this.senha_usuario = senha_usuario;
+        this.senha = senha_usuario;
     }
 
     public String getTelefone() {
-        return telefone;
+        return fone_Usuario;
     }
 
     public void setTelefone(String telefone) {
-        this.telefone = telefone;
+        this.fone_Usuario = telefone;
     }
 }

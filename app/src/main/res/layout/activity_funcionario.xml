@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FuncionarioActivity">
+
+    <View
+        android:id="@+id/rectangle"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/profile_rectangle_func"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/rectangl_whit"
+        android:layout_width="195dp"
+        android:layout_height="67dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/profile_rectangle_white"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle"
+        app:layout_constraintStart_toStartOf="@+id/rectangle"
+        app:layout_constraintTop_toTopOf="@+id/rectangle" />
+
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="4dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="Seja bem vindo!"
+        android:textColor="#FF7A00"
+        android:textAppearance="@style/perfil"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangl_whit"
+        app:layout_constraintEnd_toEndOf="@+id/rectangl_whit"
+        app:layout_constraintStart_toStartOf="@+id/rectangl_whit"
+        app:layout_constraintTop_toTopOf="@+id/rectangl_whit" />
+
+
+    <TextView
+        android:id="@+id/Alimentos"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="64dp"
+        android:elevation="4dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="Gerenciar alimentos"
+        android:textAppearance="@style/perfil"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toEndOf="@+id/circle_aliment"
+        app:layout_constraintTop_toBottomOf="@+id/rectangl_whit" />
+
+
+    <TextView
+        android:id="@+id/minha_centr"
+        android:layout_width="269dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="4dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="Gerenciar Alimento
+
+A função de gerenciar alimentos permite que os responsáveis insiram detalhes como nome, preço e ingredientes, mantendo o cardápio atualizado e atraente para os usuários.
+"
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/circle_aliment"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pizzapizza"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/circle_aliment"
+        app:layout_constraintEnd_toEndOf="@id/circle_aliment"
+        app:layout_constraintStart_toStartOf="@id/circle_aliment"
+        app:layout_constraintTop_toTopOf="@id/circle_aliment"
+        app:srcCompat="@drawable/icon_pizza" />
+
+    <View
+        android:id="@+id/circle_aliment"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/profile_bola"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="404dp"
+        android:layout_marginEnd="180dp"
+        android:elevation="4dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="Pedidos"
+        android:textAppearance="@style/perfil"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/circle_ped"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/desc_pedido"
+        android:layout_width="269dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="444dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="4dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="A função pedidos organiza o fluxo de pedidos desde a sua realização até a sua entrega. Ela possibilita que o estabelecimento confirme e prepare o pedido e o informe entrega."
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/circle_ped"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconePedido"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/circle_ped"
+        app:layout_constraintEnd_toEndOf="@id/circle_ped"
+        app:layout_constraintStart_toStartOf="@id/circle_ped"
+        app:layout_constraintTop_toTopOf="@id/circle_ped"
+        app:srcCompat="@drawable/icon_pedido_branco" />
+
+
+    <View
+        android:id="@+id/circle_ped"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="420dp"
+        android:background="@drawable/profile_bola"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/usuarios"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="584dp"
+        android:elevation="4dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="Adminisrar Usuários"
+        android:textAppearance="@style/perfil"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/circle_usuario"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/desc_usuario"
+        android:layout_width="269dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="620dp"
+        android:elevation="4dp"
+        android:fontFamily="@font/inter_black"
+        android:gravity="center_vertical"
+        android:text="Administrar Usuários A função de administrar usuários permite o registro, a autenticação e os perfis de clientes e do estabelecimento. Ela guarda dados desse usuários, assegurando um acesso seguro e personalizado ao aplicativo."
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/circle_usuario"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconeUsuario"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/circle_usuario"
+        app:layout_constraintEnd_toEndOf="@id/circle_usuario"
+        app:layout_constraintStart_toStartOf="@id/circle_usuario"
+        app:layout_constraintTop_toTopOf="@id/circle_usuario"
+        app:srcCompat="@drawable/icon_config_user" />
+
+    <View
+        android:id="@+id/circle_usuario"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="596dp"
+        android:background="@drawable/profile_bola"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

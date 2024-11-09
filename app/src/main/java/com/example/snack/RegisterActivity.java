@@ -68,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
 
             // Criando o objeto do usuario
-            Usuario usuario = new Usuario(email, nome, sobrenome, null, senha, telefone);
+            Usuario usuario = new Usuario(email, nome, sobrenome, telefone, senha, "cliente");
 
             // Chamando a API para cadastrar o usuario
             ApiService apiService = RetrofitClient.getRetrofitInstance()
@@ -82,6 +82,7 @@ public class RegisterActivity extends AppCompatActivity {
                         Toast.makeText(RegisterActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                         startActivity(intent);
+                        finish();
                     }else{
                         Toast.makeText(RegisterActivity.this, "Erro ao cadastrar, tente novamente!", Toast.LENGTH_SHORT).show();
                     }
