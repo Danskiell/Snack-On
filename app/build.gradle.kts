@@ -2,9 +2,13 @@ plugins {
     id("com.android.application")
 }
 
+
 android {
     namespace = "com.example.snack"
     compileSdk = 34
+
+
+
 
     defaultConfig {
         applicationId = "com.example.snack"
@@ -20,6 +24,16 @@ android {
             "auth0Domain" to "dev-r1uf0w8hoq10d3ef.us.auth0.com",
             "auth0Scheme" to "com.example.snack"
         ))
+    }
+
+    packagingOptions{
+        exclude("META-INF/DEPENDENCIES")
+        exclude("META-INF/LICENSE")
+        exclude("META-INF/LICENSE-notice")
+        exclude("META-INF/NOTICE")
+        exclude("META-INF/ASL2.0")
+        exclude("META-INF/INDEX.LIST")
+        exclude("META-INF/services/javax.annotation.processing.Processor")
     }
 
     buildTypes {
@@ -57,8 +71,15 @@ dependencies {
     implementation("androidx.browser:browser:1.8.0")
     implementation("androidx.recyclerview:recyclerview:1.3.1")
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation("com.cloudinary:cloudinary-http44:1.32.0")
     implementation("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
+
+
+
+
 
 
 }

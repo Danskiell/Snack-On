@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/main"
     tools:context=".GerenciarProdutoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTintMode="@null"
+        >
 
     <View
         android:id="@+id/rectangle"
@@ -64,24 +73,24 @@
         android:text="Nome"
         android:textAppearance="@style/input_label"
         android:textColor="#FF7A00"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/inputNomeProduto"
         android:layout_width="275dp"
-        android:layout_height="31dp"
+        android:layout_height="37dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="180dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/input_shape_user_profile"
         android:fontFamily="@font/inter_black"
         android:hint="Insira o nome do alimento:"
-        android:paddingStart="5dp"
+        android:paddingStart="10dp"
         android:textColor="@color/inputTextColor"
         android:textColorHint="@color/inputTextColor"
-        android:textSize="12sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,26 +110,59 @@
         android:text="Categoria"
         android:textAppearance="@style/input_label"
         android:textColor="#FF7A00"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <AutoCompleteTextView
-        android:id="@+id/dropDown"
+    <Spinner
+        android:id="@+id/spinnerCategoria"
         android:layout_width="275dp"
-        android:layout_height="31dp"
+        android:layout_height="37dp"
         android:layout_marginTop="268dp"
         android:background="@drawable/input_shape_user_profile"
-        android:fontFamily="@font/inter_black"
-        android:hint="Selecione a categoria"
-        android:paddingStart="5dp"
-        android:textSize="12sp"
+        android:paddingStart="10dp"
+        android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></AutoCompleteTextView>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+
+        <TextView
+            android:id="@+id/qntProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="548dp"
+            android:fontFamily="@font/inter_black"
+            android:gravity="center_vertical"
+            android:text="Quantidade"
+            android:textAppearance="@style/input_label"
+            android:textColor="#FF7A00"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/inputQntProduto"
+            android:layout_width="275dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="576dp"
+            android:background="@drawable/input_shape_user_profile"
+            android:fontFamily="@font/inter_black"
+            android:hint="Insira a quantidade do alimento:"
+            android:paddingStart="10dp"
+            android:textColor="@color/inputTextColor"
+            android:textColorHint="@color/inputTextColor"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.169"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
         android:id="@+id/Descricao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -132,124 +174,137 @@
         android:gravity="center_vertical"
         android:text="Descrição"
         android:textColor="#FF7A00"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/inputDescProduto"
         android:layout_width="275dp"
-        android:layout_height="31dp"
+        android:layout_height="80dp"
         android:layout_marginTop="356dp"
         android:background="@drawable/input_shape_user_profile"
         android:fontFamily="@font/inter_black"
         android:hint="Insira a descrição do alimento:"
-        android:paddingStart="5dp"
+        android:paddingStart="10dp"
         android:textColor="@color/inputTextColor"
         android:textColorHint="@color/inputTextColor"
-        android:textSize="12sp"
+        android:textSize="15sp"
+        android:gravity="start|top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent=".8"></EditText>
 
-    <TextView
-        android:id="@+id/Preco"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="412dp"
-        android:fontFamily="@font/inter_black"
-        android:gravity="center_vertical"
-        android:text="Preço"
-        android:textAppearance="@style/input_label"
-        android:textColor="#FF7A00"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/Preco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="460dp"
+            android:fontFamily="@font/inter_black"
+            android:gravity="center_vertical"
+            android:text="Preço"
+            android:textAppearance="@style/input_label"
+            android:textColor="#FF7A00"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/inputPrecoProduto"
-        android:layout_width="275dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="444dp"
-        android:background="@drawable/input_shape_user_profile"
-        android:fontFamily="@font/inter_black"
-        android:hint="Insira a descrição do alimento:"
-        android:paddingStart="5dp"
-        android:textColor="@color/inputTextColor"
-        android:textColorHint="@color/inputTextColor"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></EditText>
+        <EditText
+            android:id="@+id/inputPrecoProduto"
+            android:layout_width="275dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="492dp"
+            android:background="@drawable/input_shape_user_profile"
+            android:fontFamily="@font/inter_black"
+            android:hint="Insira o preço do alimento:"
+            android:paddingStart="10dp"
+            android:textColor="@color/inputTextColor"
+            android:textColorHint="@color/inputTextColor"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.169"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></EditText>
 
-    <TextView
-        android:id="@+id/foto_do_ali"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="510dp"
-        android:layout_marginEnd="50dp"
-        android:fontFamily="@font/inter_black"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Foto do alimento"
-        android:textAppearance="@style/alimento_label"
-        android:textSize="14sp"
+        <TextView
+            android:id="@+id/foto_do_ali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="676dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/inter_black"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Foto do alimento"
+            android:textAppearance="@style/alimento_label"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageContainer"
+            app:layout_constraintHorizontal_bias="0.602"
+            app:layout_constraintStart_toStartOf="@+id/imageContainer"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+        android:id="@+id/camera_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageContainer"
         app:layout_constraintEnd_toEndOf="@+id/imageContainer"
         app:layout_constraintStart_toStartOf="@+id/imageContainer"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageContainer"
+        app:srcCompat="@drawable/icon_upload" />
 
-    <View
-        android:id="@+id/imageContainer"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="542dp"
-        android:background="@drawable/square_corner"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <android.widget.Button
-        android:id="@+id/buttonUpload"
+        <View
+            android:id="@+id/imageContainer"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="704dp"
+            android:background="@drawable/square_corner"
+            android:elevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.widget.Button
+        android:id="@+id/botaofoto"
         android:layout_width="170dp"
         android:layout_height="45dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="252dp"
-        android:background="@drawable/btn_editar_shape"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/btn_image_shape"
         android:elevation="16dp"
         android:fontFamily="@font/inter_black"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:text="Alterar foto"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageContainer"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageContainer"
-        app:layout_constraintVertical_bias="0.326" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <android.widget.Button
-        android:id="@+id/Editar"
+        android:id="@+id/Apagar"
         android:layout_width="170dp"
         android:layout_height="45dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/btn_image_shape"
         android:elevation="16dp"
         android:fontFamily="@font/inter_black"
@@ -260,12 +315,46 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageContainer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageContainer"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUpload"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <android.widget.Button
+            android:id="@+id/botaoEnviar"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_editar_shape"
+            android:elevation="16dp"
+            android:fontFamily="@font/inter_black"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Cadastrar"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.457"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/camera_icon"
+            app:layout_constraintVertical_bias="0.219" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="870dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rectangl_whit" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

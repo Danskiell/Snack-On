@@ -33,4 +33,11 @@
     // Nova Senha
     <string name="desc3"> Pronto! Agora basta criar e confirmar uma nova senha para acessar a sua conta.</string>
 
+    <!-- Credenciais do Cloudinary -->
+    <string name="cloudinary_api_key">648497256752256</string>
+    <string name="cloudinary_api_secret">ECmMd2ARre9izCGuYf_6eoyQIcU</string>
+    <string name="cloudinary_cloud_name">daniel</string>
+    <string name="cloudinary_url">cloudinary://648497256752256:ECmMd2ARre9izCGuYf_6eoyQIcU@daniel</string>
+
+
 </resources>

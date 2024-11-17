@@ -37,5 +37,9 @@ public class ComprasActivity extends AppCompatActivity {
 
     }
 
+    public void salgados(View view){
+        startActivity(new Intent(ComprasActivity.this, SalgadosActivity.class));
+    }
+
 
 }
