@@ -3,7 +3,6 @@ package com.example.snack;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,9 +36,52 @@ public class ComprasActivity extends AppCompatActivity {
 
     }
 
+    // Aplicando categoria para o carregamento dos produtos
     public void salgados(View view){
-        startActivity(new Intent(ComprasActivity.this, SalgadosActivity.class));
+        Intent intent = new Intent(ComprasActivity.this, CategoriaActivity.class);
+        intent.putExtra("categoria", "Salgados");
+        startActivity(intent);
     }
+
+    public void doces(View view){
+        Intent intent = new Intent(ComprasActivity.this, CategoriaActivity.class);
+        intent.putExtra("categoria", "Doces");
+        startActivity(intent);
+    }
+
+    public void bebidas(View view){
+        Intent intent = new Intent(ComprasActivity.this, CategoriaActivity.class);
+        intent.putExtra("categoria", "Bebidas");
+        startActivity(intent);
+    }
+
+    public void lanches(View view){
+        Intent intent = new Intent(ComprasActivity.this, CategoriaActivity.class);
+        intent.putExtra("categoria", "Lanches");
+        startActivity(intent);
+    }
+
+    public void bolos(View view){
+        Intent intent = new Intent(ComprasActivity.this, CategoriaActivity.class);
+        intent.putExtra("categoria", "Bolos");
+        startActivity(intent);
+    }
+
+    public void outros(View view){
+        Intent intent = new Intent(ComprasActivity.this, CategoriaActivity.class);
+        intent.putExtra("categoria", "Outros");
+        startActivity(intent);
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 }

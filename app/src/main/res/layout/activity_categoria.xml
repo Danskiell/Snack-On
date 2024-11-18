@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:fillViewport="true"
     android:id="@+id/main"
-    tools:context=".SalgadosActivity">
+    tools:context=".CategoriaActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

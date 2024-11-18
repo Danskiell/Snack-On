@@ -11,15 +11,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.snack.adapters.ProdutoAdapter;
 import com.example.snack.model.Produto;
-import com.example.snack.RetrofitClient;
-import com.example.snack.ApiService;
+
 import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SalgadosActivity extends AppCompatActivity {
+public class CategoriaActivity extends AppCompatActivity {
 
     private RecyclerView recyclerViewProdutos;
     private ProgressBar progressBar;
@@ -27,11 +26,12 @@ public class SalgadosActivity extends AppCompatActivity {
     private ProdutoAdapter produtoAdapter;
     private List<Produto> produtoList = new ArrayList<>();
     private ApiService produtoApi;
+    private String categoriaSelecionada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_salgados);
+        setContentView(R.layout.activity_categoria);
 
         // Vinculando os elementos da interface
         recyclerViewProdutos = findViewById(R.id.recyclerViewProdutos);
@@ -43,11 +43,17 @@ public class SalgadosActivity extends AppCompatActivity {
         produtoAdapter = new ProdutoAdapter(produtoList, this);
         recyclerViewProdutos.setAdapter(produtoAdapter);
 
+        // Recebendo a categoria via Intent
+        categoriaSelecionada = getIntent().getStringExtra("categoria");
+        if (categoriaSelecionada == null || categoriaSelecionada.isEmpty()) {
+            categoriaSelecionada = "Todas"; // Categoria padrão
+        }
+
         // Instanciando a API
         produtoApi = RetrofitClient.getRetrofitInstance().create(ApiService.class);
 
         // Carregar produtos automaticamente
-        carregarProdutosPorCategoria("Salgados");
+        carregarProdutosPorCategoria(categoriaSelecionada);
     }
 
     private void carregarProdutosPorCategoria(String categoria) {
@@ -68,14 +74,14 @@ public class SalgadosActivity extends AppCompatActivity {
                         textViewEmpty.setVisibility(View.VISIBLE);
                     }
                 } else {
-                    Toast.makeText(SalgadosActivity.this, "Erro ao carregar produtos.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CategoriaActivity.this, "Erro ao carregar produtos.", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<List<Produto>> call, @NonNull Throwable t) {
                 progressBar.setVisibility(View.GONE);
-                Toast.makeText(SalgadosActivity.this, "Erro de conexão.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CategoriaActivity.this, "Erro de conexão.", Toast.LENGTH_SHORT).show();
             }
         });
     }
