@@ -1,10 +1,14 @@
 package com.example.snack.adapters;
 
+import com.example.snack.manager.CarrinhoManager;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -28,7 +32,7 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ProdutoV
     @Override
     public ProdutoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_produto, parent, false);
-        return new ProdutoViewHolder(view);
+        return new ProdutoViewHolder(view); // Construtor corrigido
     }
 
     @Override
@@ -38,35 +42,34 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ProdutoV
         holder.nomeProduto.setText(produto.getNome_Produto());
         holder.descricaoProduto.setText(produto.getDescricao());
         holder.precoProduto.setText(String.format("R$ %.2f", produto.getPreco_Produto()));
+        final Animation anim = AnimationUtils.loadAnimation(context, R.anim.add_to_cart);
 
-        String imageUrl = produto.getImageUrl();
-        Log.d("ProdutoAdapter", "Carregando imagem: " + imageUrl);
+        // Carregar imagem com Glide
+        Glide.with(context)
+                .load(produto.getImageUrl())
+                .placeholder(R.drawable.placeholder_image)
+                .error(R.drawable.placeholder_image)
+                .into(holder.imagemProduto);
 
-        if (imageUrl != null && !imageUrl.trim().isEmpty()) {
-            Glide.with(context)
-                    .load(imageUrl)
-                    .placeholder(R.drawable.placeholder_image) // Imagem padrão
-                    .error(R.drawable.placeholder_image) // Em caso de erro no carregamento
-                    .into(holder.imagemProduto);
-        } else {
-            Log.e("ProdutoAdapter", "URL de imagem inválida para o produto: " + produto.getNome_Produto());
-            Glide.with(context)
-                    .load(R.drawable.placeholder_image)
-                    .into(holder.imagemProduto);
-        }
+        // Configurar o clique no botão de adicionar ao carrinho
+        holder.btnAddCarrinho.setOnClickListener(v -> {
+            CarrinhoManager.getInstance().adicionarAoCarrinho(produto);
+            Log.d("Carrinho", "Produto adicionado: " + produto.getNome_Produto());
+            holder.btnAddCarrinho.startAnimation(anim);
+            holder.iconeButton.startAnimation(anim);
+        });
     }
-
-
-
 
     @Override
     public int getItemCount() {
         return produtoList.size();
     }
 
+    // ViewHolder correto
     static class ProdutoViewHolder extends RecyclerView.ViewHolder {
         TextView nomeProduto, descricaoProduto, precoProduto;
-        ImageView imagemProduto;
+        ImageView imagemProduto, iconeButton;
+        Button btnAddCarrinho;
 
         public ProdutoViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -74,6 +77,8 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ProdutoV
             descricaoProduto = itemView.findViewById(R.id.descricaoProduto);
             precoProduto = itemView.findViewById(R.id.precoProduto);
             imagemProduto = itemView.findViewById(R.id.imagemProduto);
+            btnAddCarrinho = itemView.findViewById(R.id.btnAdicionarCarrinho);
+            iconeButton = itemView.findViewById(R.id.iconeButton);
         }
     }
 }

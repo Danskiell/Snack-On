@@ -21,7 +21,7 @@
     <!-- Nome do Produto -->
     <TextView
         android:id="@+id/nomeProduto"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:fontFamily="@font/inter_black"
@@ -30,18 +30,20 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/imagemProduto"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:text="Nome do Produto" />
 
     <!-- Descrição do Produto -->
     <TextView
         android:id="@+id/descricaoProduto"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textColor="#6D6D6D"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@id/nomeProduto"
         app:layout_constraintTop_toBottomOf="@id/nomeProduto"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:text="Descrição do Produto" />
 
     <!-- Preço do Produto -->
@@ -57,7 +59,37 @@
         app:layout_constraintTop_toBottomOf="@id/descricaoProduto"
         tools:text="R$ 10.00" />
 
-    <!-- Linha Divisória (Borda Cinza) -->
+    <!-- Botão Adicionar ao Carrinho -->
+
+    <!-- Linha Divisória -->
+
+    <ImageView
+        android:id="@+id/iconeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAdicionarCarrinho"
+        app:layout_constraintEnd_toEndOf="@+id/btnAdicionarCarrinho"
+        app:layout_constraintStart_toStartOf="@+id/btnAdicionarCarrinho"
+        app:layout_constraintTop_toTopOf="@+id/btnAdicionarCarrinho"
+        app:srcCompat="@drawable/icon_addcart" />
+
+    <android.widget.Button
+        android:id="@+id/btnAdicionarCarrinho"
+        android:layout_width="111dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="216dp"
+        android:background="@drawable/btn_cart_shape"
+        android:elevation="4dp"
+        android:fontFamily="@font/inter_black"
+        android:onClick="mudarsenha"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imagemProduto"
+        app:layout_constraintTop_toTopOf="@+id/precoProduto" />
+
     <View
         android:layout_width="0dp"
         android:layout_height="1dp"
@@ -65,6 +97,6 @@
         android:background="#D3D3D3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/precoProduto" />
+        app:layout_constraintTop_toBottomOf="@id/btnAdicionarCarrinho" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

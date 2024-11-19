@@ -6,6 +6,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -44,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
     }
 
-    private void logar(View view) {
+    public void logar(View view) {
         String email = emailEditText.getText().toString();
         String senha = senhaEditText.getText().toString();
         if (email.isEmpty() || senha.isEmpty()) {
@@ -64,29 +65,33 @@ public class LoginActivity extends AppCompatActivity {
                     String token = loginResponse.getToken();
                     Usuario usuario = loginResponse.getUsuario();
 
-                    Toast.makeText(LoginActivity.this, "Login feito com sucesso!", Toast.LENGTH_SHORT).show();
+                    // Aqui você não vai salvar o estado de login no SharedPreferences
+                    // Apenas salve dados do carrinho ou do pedido, se necessário
+                    SharedPreferences sharedPreferences = getSharedPreferences("carrinho_prefs", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("nome_cliente", usuario.getNome_usuario()); // Exemplo
+                    editor.apply();
 
+                    // Proseguir para a próxima tela com base no tipo de usuário
                     Intent intent;
-                    if ("funcionario".equalsIgnoreCase(usuario.getCargo())){
+                    if ("funcionario".equalsIgnoreCase(usuario.getCargo())) {
                         intent = new Intent(LoginActivity.this, FuncionarioActivity.class);
                     } else {
                         intent = new Intent(LoginActivity.this, ComprasActivity.class);
                     }
-
                     startActivity(intent);
                     finish();
-
-                }else {
+                } else {
                     Toast.makeText(LoginActivity.this, "Usuário ou senha inválidos!", Toast.LENGTH_SHORT).show();
                 }
             }
+
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 Toast.makeText(LoginActivity.this, "Falha ao fazer login: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
+
 
 }

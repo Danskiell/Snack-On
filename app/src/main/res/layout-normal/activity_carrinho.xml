@@ -27,7 +27,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCarrinho"
+        android:layout_width="389dp"
+        android:layout_height="450dp"
+        app:layout_constraintBottom_toTopOf="@id/btnCadastro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itens_no_ca"
+        app:layout_constraintVertical_bias="0.154" />
 
     <TextView
         android:id="@+id/total_"
