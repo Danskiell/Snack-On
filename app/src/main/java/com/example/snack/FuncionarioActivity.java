@@ -26,4 +26,8 @@ public class FuncionarioActivity extends AppCompatActivity {
     public void gerenciar(View view) {
         startActivity(new Intent(FuncionarioActivity.this, GerenciarProdutoActivity.class));
     }
+
+    public void pedido(View view) {
+        startActivity(new Intent(FuncionarioActivity.this, PedidoFuncionario.class));
+    }
 }

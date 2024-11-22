@@ -129,6 +129,7 @@ A função de gerenciar alimentos permite que os responsáveis insiram detalhes 
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
+        android:onClick="pedido"
         android:layout_marginTop="404dp"
         android:layout_marginEnd="180dp"
         android:elevation="4dp"
@@ -150,6 +151,7 @@ A função de gerenciar alimentos permite que os responsáveis insiram detalhes 
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
+        android:onClick="pedido"
         android:layout_marginTop="444dp"
         android:layout_marginEnd="8dp"
         android:elevation="4dp"
@@ -170,6 +172,7 @@ A função de gerenciar alimentos permite que os responsáveis insiram detalhes 
         app:layout_constraintBottom_toBottomOf="@id/circle_ped"
         app:layout_constraintEnd_toEndOf="@id/circle_ped"
         app:layout_constraintStart_toStartOf="@id/circle_ped"
+        android:onClick="pedido"
         app:layout_constraintTop_toTopOf="@id/circle_ped"
         app:srcCompat="@drawable/icon_pedido_branco" />
 
@@ -180,6 +183,7 @@ A função de gerenciar alimentos permite que os responsáveis insiram detalhes 
         android:layout_height="80dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="420dp"
+        android:onClick="pedido"
         android:background="@drawable/profile_bola"
         android:elevation="2dp"
         app:layout_constraintStart_toStartOf="parent"

@@ -25,7 +25,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
     public void gohome(View view){
         startActivity(new Intent(ProfileActivity.this, ComprasActivity.class));
-
     }
     public void carrinho(View view){
         startActivity(new Intent(ProfileActivity.this, CarrinhoActivity.class));

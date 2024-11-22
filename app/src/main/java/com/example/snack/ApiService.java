@@ -2,6 +2,7 @@ package com.example.snack;
 
 import com.example.snack.model.Usuario;
 import com.example.snack.model.Produto;
+import com.example.snack.model.Pedido;
 import com.example.snack.restful.LoginRequest;
 import com.example.snack.restful.LoginResponse;
 import okhttp3.MultipartBody;
@@ -18,6 +19,7 @@ import retrofit2.http.Query;
 import java.util.List;
 
 public interface ApiService {
+
     // Cadastro de usuário
     @POST("api/cadastro")
     Call<Usuario> cadastrarUsuario(@Body Usuario usuario);
@@ -42,7 +44,20 @@ public interface ApiService {
             @Part MultipartBody.Part imagem
     );
 
+    // Buscar produtos por categoria
     @GET("api/produtos/categoria/{categoria}")
     Call<List<Produto>> getProdutosPorCategoria(@Path("categoria") String categoria);
 
-    }
+    // Criar pedido
+    @POST("api/pedidos")
+    Call<Pedido> criarPedido(@Body Pedido pedido);
+
+    // Listar pedidos
+    @GET("api/pedidos")
+    Call<List<Pedido>> listarPedidos();
+
+    // Buscar pedido por ID
+    @GET("api/pedidos/{id}")
+    Call<Pedido> buscarPedido(@Path("id") long id);
+
+}
